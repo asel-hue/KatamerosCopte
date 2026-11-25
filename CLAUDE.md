@@ -28,7 +28,7 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
 - Gradle ne peut pas ouvrir de connexion locale depuis le bac à sable de Claude. Il faut lancer les builds dans le **terminal intégré** (`run_in_terminal`) ou dans Android Studio.
 - `.\gradlew.bat assembleDebug`, `.\gradlew.bat test`, et dans `../coptic-calendar-core` : `.\gradlew.bat test`.
 - Le cache de build est désactivé à cause de OneDrive (`gradle.properties`), et les sorties de build vont dans `%LOCALAPPDATA%\gradle-builds\KatamerosCopte` (voir `build.gradle`). L'APK de debug s'y trouve.
-- Émulateur : la variable ANDROID_SDK_ROOT du poste pointe vers `C:\devndroid-sdk` (inexistant) ; la forcer sur `%LOCALAPPDATA%\Android\Sdk`. L'émulateur sature la machine (ANR système) : préférer un vrai téléphone.
+- Émulateur : la variable ANDROID_SDK_ROOT du poste pointe vers `C:\dev\android-sdk` (inexistant) ; la forcer sur `%LOCALAPPDATA%\Android\Sdk`. L'émulateur sature la machine (ANR système) : préférer un vrai téléphone.
 
 ## Phases
 1. Squelette : dépôts, modules, agents. **Fait.**
