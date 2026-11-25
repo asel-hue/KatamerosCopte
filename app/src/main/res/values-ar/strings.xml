@@ -42,11 +42,6 @@
     <string name="theme_system">حسب النظام</string>
     <string name="theme_light">فاتح</string>
     <string name="theme_dark">داكن</string>
-    <string name="settings_content">المحتوى</string>
-    <string name="content_version">إصدار المحتوى: %1$d (%2$s)</string>
-    <string name="content_embedded">مدمج في التطبيق</string>
-    <string name="content_downloaded">تم تنزيله</string>
-    <string name="restore_embedded">العودة إلى المحتوى المدمج</string>
 
     <string name="permission_read_liturgy_label">قراءة اليوم الطقسي القبطي</string>
     <string name="permission_read_liturgy_description">يسمح لتطبيق قبطي آخر من نفس الناشر بقراءة التاريخ القبطي والعيد وقديسي اليوم.</string>

@@ -11,15 +11,13 @@ import androidx.core.view.updatePadding
 import com.copte.katameros.CopticText
 import com.copte.katameros.Prefs
 import com.copte.katameros.R
-import com.copte.katameros.data.ContentStore
-import com.copte.katameros.data.ContentUpdater
 import com.copte.katameros.databinding.ActivitySettingsBinding
 import com.copte.katameros.widget.DayWidget
 import com.google.android.material.radiobutton.MaterialRadioButton
 
 /**
- * Réglages : langue de l'application, taille du texte, thème, version du contenu.
- * Les mises à jour du contenu sont automatiques (une fois par semaine), comme dans LivreAGPIA.
+ * Réglages : langue de l'application, taille du texte, thème.
+ * Les mises à jour du contenu sont automatiques (une fois par semaine), sans réglage.
  * La langue des lectures se choisit avec le bouton globe de l'écran du jour.
  */
 class SettingsActivity : AppCompatActivity() {
@@ -78,13 +76,6 @@ class SettingsActivity : AppCompatActivity() {
             }
             prefs.applyNightMode()
         }
-
-        updateContentInfo()
-        binding.restoreEmbedded.setOnClickListener {
-            ContentUpdater.restoreEmbedded(this)
-            DayWidget.updateAll(this)
-            updateContentInfo()
-        }
     }
 
     private fun languageName(code: String): String = getString(
@@ -98,16 +89,5 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun updateFontLabel() {
         binding.fontSizeLabel.text = getString(R.string.settings_font_size, prefs.fontSize.toInt())
-    }
-
-    private fun updateContentInfo() {
-        val downloaded = ContentStore.source == ContentStore.Source.DOWNLOADED
-        val version = runCatching { ContentStore.manifest().contentVersion }.getOrDefault(0)
-        binding.contentVersion.text = getString(
-            R.string.content_version,
-            version,
-            getString(if (downloaded) R.string.content_downloaded else R.string.content_embedded),
-        )
-        binding.restoreEmbedded.isEnabled = downloaded
     }
 }

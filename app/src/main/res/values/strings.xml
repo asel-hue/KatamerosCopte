@@ -46,11 +46,6 @@
     <string name="theme_system">Comme le système</string>
     <string name="theme_light">Clair</string>
     <string name="theme_dark">Sombre</string>
-    <string name="settings_content">Contenu</string>
-    <string name="content_version">Version du contenu : %1$d (%2$s)</string>
-    <string name="content_embedded">intégré à l\'application</string>
-    <string name="content_downloaded">téléchargé</string>
-    <string name="restore_embedded">Revenir au contenu intégré</string>
     <string name="lang_fr" translatable="false">Français</string>
     <string name="lang_ar" translatable="false">العربية</string>
     <string name="lang_en" translatable="false">English</string>
