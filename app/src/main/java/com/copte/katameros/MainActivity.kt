@@ -91,7 +91,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(STATE_DATE, date.toString())
+        // Pas de date à sauver si l'activité a été recréée avant tout affichage (changement de langue) :
+        // sinon la date du jour masquerait celle d'un lien copte://.
+        if (::binding.isInitialized) outState.putString(STATE_DATE, date.toString())
     }
 
     override fun onDestroy() {
