@@ -96,7 +96,7 @@ def main() -> int:
         print(f"{key:28s} {date}  {day.get('title')!s:40.40s} {len(result[key]['sections'])} sections")
         time.sleep(1)  # rester discret avec l'API publique
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     print(f"-> {OUT.relative_to(ROOT)}")
     return 0
 

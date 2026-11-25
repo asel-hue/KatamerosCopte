@@ -151,7 +151,7 @@ def main() -> int:
             "languages": [{"code": c, **LANGUAGE_INFO[c]} for c in LANGUAGES],
             "files": files,
         }
-        MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         print(f"manifest.json écrit (contentVersion {manifest['contentVersion']}, {len(files)} fichiers)")
         return 0
     if stale:

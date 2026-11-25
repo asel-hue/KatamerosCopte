@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 2,
+  "contentVersion": 3,
   "updatedAt": "2026-11-25",
   "languages": [
     {
@@ -26,52 +26,52 @@
   ],
   "files": {
     "ar/bible.json": {
-      "sha256": "12974edb2de26d1445b2eb3f83d21feeab6e7029a69af2881d2b91cf0d7d0eb9",
-      "size": 2527093
+      "sha256": "30eb53e911f64b5a6c32b87f3e31ab14e5d49b39b1455f25133bcd8477e916a8",
+      "size": 2527092
     },
     "ar/synaxarium.json": {
-      "sha256": "3c0ef387174f7d2f1d78b4a79e044adae65b2850e2c6574ac68614cb4795f4e0",
-      "size": 1745362
+      "sha256": "1959a88ce9b15335a31e2fe1fb9c969a047e73ea4a932eb0850b8872f7755cc0",
+      "size": 1745361
     },
     "ar/texts.json": {
-      "sha256": "6adc533e544aaf6d9429e51cfb350a290bea50de825df5b06d91e610d313379c",
-      "size": 8145
+      "sha256": "c3862533da3a3be121b1ab815458f70663c14e2181766e0cda6e11cafe436d5f",
+      "size": 8144
     },
     "cop/bible.json": {
-      "sha256": "5bec35871e37a7fa8b24afc543b42f5586e27dede5e00b9b707a78be29e83b76",
-      "size": 2817727
+      "sha256": "8be6ec3e5b721744d30285099f1e1934baaf9e68ff97158e14435ed42177fa84",
+      "size": 2817726
     },
     "cop/texts.json": {
-      "sha256": "0d1451ff042584245ea498015685a2c35988ac7f9e030cfdce14533d9f4cb323",
-      "size": 168
+      "sha256": "f06f317f5dd2ffd797d9e057e4d45d605158ded675dffe753fdcaf7e40b94da4",
+      "size": 167
     },
     "en/bible.json": {
-      "sha256": "429afca96c683fda41c7d661a055d5aee586abe8364d2bf904daaf3dddc4d570",
-      "size": 1395475
+      "sha256": "295f14e0cd99a94026680f11cd12d8cb3d7a43d7f09eea160aa30f3210faa587",
+      "size": 1395474
     },
     "en/synaxarium.json": {
-      "sha256": "9261769433a9191d0a44ceb9f0acdcf9c979696ddc71e22c4f749f78e4abfbb0",
-      "size": 1506774
+      "sha256": "8682aa2352e501c99b1501eaf8935a95e8c91c256a5163481bd6717d35f6196b",
+      "size": 1506773
     },
     "en/texts.json": {
-      "sha256": "85c60819ab60e268b962f54d70bb7774e40ce9107b13af66be680951d95e966e",
-      "size": 6161
+      "sha256": "8b8f4421c9fab8309a9d88d7e3422e4094b9886b69f484432dd9076740f13351",
+      "size": 6160
     },
     "fr/bible.json": {
-      "sha256": "96e83e7e97ad7bc3d73c7e8d9a2461a645c7da79a4b8d5d69e9b6ed7be814242",
-      "size": 1532316
+      "sha256": "0ac91d8c5e73d9d3f42075bddefdafce5f2d76b7df6e1ad73328b50c77f5dd37",
+      "size": 1532315
     },
     "fr/synaxarium.json": {
-      "sha256": "fcec32122d163dd43fb3543a072c01ec4beddd8f14161123e9f61ff43fd60e97",
-      "size": 1486648
+      "sha256": "a6c4bf75b65c808f296ee613a10ad75e51ec7a9155f81132383cc9bfd2763a79",
+      "size": 1486647
     },
     "fr/texts.json": {
-      "sha256": "594267883d9de94525c8f4ddb1d37238d7321ebed3668f9b480c9d8b30f41e63",
-      "size": 6645
+      "sha256": "402638019419b38673566f92b61cfac6054e08a5e79faceb56200a41a0deb82c",
+      "size": 6644
     },
     "lectionary.json": {
-      "sha256": "35352427eda63098f3b32883280a74a586880e93190f447577277c2b2d4e28c5",
-      "size": 163340
+      "sha256": "88ffec7680eb66b1df6e74587b2e72baf608b197d8806ce6643529a4bcf3c87a",
+      "size": 163339
     }
   }
 }
