@@ -97,13 +97,17 @@ class Synaxarium(private val loadMonth: (Int) -> String?) {
     }
 
     companion object {
+        private val WHITESPACE = Regex("\\s+")
+
         fun parse(json: String): Map<String, List<Commemoration>> {
             val root = JSONObject(json)
             return root.keys().asSequence().associateWith { key ->
                 val arr = root.getJSONArray(key)
                 (0 until arr.length()).map { i ->
                     val c = arr.getJSONObject(i)
-                    Commemoration(c.optStringOrNull("id"), c.optString("title"), c.optString("html"))
+                    // Certains titres contiennent des retours à la ligne : un titre tient sur une ligne logique.
+                    val title = c.optString("title").replace(WHITESPACE, " ").trim()
+                    Commemoration(c.optStringOrNull("id"), title, c.optString("html"))
                 }
             }
         }

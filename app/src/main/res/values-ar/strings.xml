@@ -35,8 +35,7 @@
     <string name="season_virgin_fast">صوم العذراء</string>
 
     <string name="settings_languages">اللغات</string>
-    <string name="settings_primary_language">اللغة الأساسية (ولغة الواجهة)</string>
-    <string name="settings_secondary_language">لغة ثانية (زر التبديل أعلى الشاشة)</string>
+    <string name="settings_primary_language">لغة التطبيق</string>
     <string name="settings_display">العرض</string>
     <string name="settings_font_size">حجم الخط: %1$d</string>
     <string name="settings_theme">المظهر</string>
@@ -47,19 +46,17 @@
     <string name="content_version">إصدار المحتوى: %1$d (%2$s)</string>
     <string name="content_embedded">مدمج في التطبيق</string>
     <string name="content_downloaded">تم تنزيله</string>
-    <string name="check_updates">البحث عن تحديث</string>
-    <string name="update_done">تم تحديث المحتوى (الإصدار %1$d).</string>
-    <string name="update_none">المحتوى محدَّث بالفعل.</string>
-    <string name="update_failed">تعذّر التحديث: %1$s</string>
     <string name="restore_embedded">العودة إلى المحتوى المدمج</string>
-    <string name="sources_note">القراءات والسنكسار: katameros-api (رخصة MIT). الكتاب المقدس: لويس سيغون 1910، فان دايك، NKJV، الكتاب المقدس القبطي.</string>
-
-    <string name="lang_none">لا شيء</string>
 
     <string name="permission_read_liturgy_label">قراءة اليوم الطقسي القبطي</string>
     <string name="permission_read_liturgy_description">يسمح لتطبيق قبطي آخر من نفس الناشر بقراءة التاريخ القبطي والعيد وقديسي اليوم.</string>
-    <string name="switch_language">تبديل اللغة</string>
     <string name="expand_all">فتح الكل</string>
     <string name="collapse_all">طي الكل</string>
-    <string name="showing_language">القراءات بـ %1$s</string>
+    <string name="reading_language">لغة القراءات</string>
+    <string name="calendar">التقويم</string>
+    <string name="calendar_search">ابحث عن عيد أو قديس</string>
+    <string name="calendar_until">حتى %1$s</string>
+    <string name="calendar_no_result">لا توجد نتائج</string>
+    <string name="previous_year">السنة السابقة</string>
+    <string name="next_year">السنة التالية</string>
 </resources>

@@ -55,6 +55,11 @@
             android:readPermission="com.copte.katameros.permission.READ_LITURGY" />
 
         <activity
+            android:name=".ui.CalendarActivity"
+            android:label="@string/calendar"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
             android:name=".ui.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".MainActivity" />

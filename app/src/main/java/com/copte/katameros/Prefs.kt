@@ -26,9 +26,12 @@ class Prefs(context: Context) {
             if (prefs.getString(KEY_SECONDARY, null) == value) remove(KEY_SECONDARY)
         }
 
-    /** Langue secondaire (fr, ar, en, cop) affichée sous chaque lecture, ou `null`. */
-    var secondaryLanguage: String?
-        get() = prefs.getString(KEY_SECONDARY, null)?.takeIf { it.isNotBlank() && it != primaryLanguage }
+    /**
+     * Langue des lectures choisie avec le bouton globe (fr, ar, en, cop), ou `null` pour la langue principale.
+     * Mémorisée d'un lancement à l'autre.
+     */
+    var displayLanguage: String?
+        get() = prefs.getString(KEY_SECONDARY, null)?.takeIf { it in ALL_LANGUAGES && it != primaryLanguage }
         set(value) = prefs.edit {
             if (value.isNullOrBlank() || value == primaryLanguage) remove(KEY_SECONDARY) else putString(KEY_SECONDARY, value)
         }

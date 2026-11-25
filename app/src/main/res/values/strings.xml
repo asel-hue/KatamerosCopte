@@ -39,8 +39,7 @@
 
     <!-- Réglages -->
     <string name="settings_languages">Langues</string>
-    <string name="settings_primary_language">Langue principale (et de l\'interface)</string>
-    <string name="settings_secondary_language">Seconde langue (bouton de bascule en haut de l\'écran)</string>
+    <string name="settings_primary_language">Langue de l\'application</string>
     <string name="settings_display">Affichage</string>
     <string name="settings_font_size">Taille du texte : %1$d</string>
     <string name="settings_theme">Thème</string>
@@ -51,14 +50,7 @@
     <string name="content_version">Version du contenu : %1$d (%2$s)</string>
     <string name="content_embedded">intégré à l\'application</string>
     <string name="content_downloaded">téléchargé</string>
-    <string name="check_updates">Rechercher une mise à jour</string>
-    <string name="update_done">Contenu mis à jour (version %1$d).</string>
-    <string name="update_none">Le contenu est déjà à jour.</string>
-    <string name="update_failed">Mise à jour impossible : %1$s</string>
     <string name="restore_embedded">Revenir au contenu intégré</string>
-    <string name="sources_note">Lectures et Synaxaire : katameros-api (licence MIT). Bibles : Louis Segond 1910, Van Dyck, NKJV, Bible copte.</string>
-
-    <string name="lang_none">Aucune</string>
     <string name="lang_fr" translatable="false">Français</string>
     <string name="lang_ar" translatable="false">العربية</string>
     <string name="lang_en" translatable="false">English</string>
@@ -66,8 +58,13 @@
 
     <string name="permission_read_liturgy_label">Lire le jour liturgique copte</string>
     <string name="permission_read_liturgy_description">Permet à une autre application copte signée par le même éditeur de lire la date copte, la fête et les saints du jour.</string>
-    <string name="switch_language">Changer de langue</string>
     <string name="expand_all">Tout déplier</string>
     <string name="collapse_all">Tout replier</string>
-    <string name="showing_language">Lectures en %1$s</string>
+    <string name="reading_language">Langue des lectures</string>
+    <string name="calendar">Calendrier</string>
+    <string name="calendar_search">Rechercher une fête, un saint</string>
+    <string name="calendar_until">jusqu\'au %1$s</string>
+    <string name="calendar_no_result">Aucun résultat</string>
+    <string name="previous_year">Année précédente</string>
+    <string name="next_year">Année suivante</string>
 </resources>

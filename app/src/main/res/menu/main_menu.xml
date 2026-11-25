@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!-- Bascule entre la langue principale et la seconde langue (visible si une seconde langue est choisie). -->
+    <!-- Langue des lectures : liste des langues disponibles. -->
     <item
-        android:id="@+id/action_switch_language"
-        android:icon="@drawable/ic_translate"
-        android:title="@string/switch_language"
-        android:visible="false"
+        android:id="@+id/action_language"
+        android:icon="@drawable/ic_language"
+        android:title="@string/reading_language"
         app:showAsAction="always" />
+    <!-- Calendrier : fêtes et jeûnes de l'année, recherche (fêtes et saints). -->
     <item
-        android:id="@+id/action_previous"
-        android:icon="@drawable/ic_chevron_left"
-        android:title="@string/previous_day"
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_event_list"
+        android:title="@string/calendar"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_today"
         android:icon="@drawable/ic_home"
         android:title="@string/today"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/action_next"
-        android:icon="@drawable/ic_chevron_right"
-        android:title="@string/next_day"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/action_pick_date"
-        android:icon="@drawable/ic_calendar"
-        android:title="@string/choose_date"
-        app:showAsAction="never" />
     <item
         android:id="@+id/action_expand_all"
         android:icon="@drawable/ic_unfold_more"

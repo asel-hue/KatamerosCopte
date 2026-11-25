@@ -8,21 +8,23 @@ import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.copte.calendar.LiturgyContract
 import com.copte.katameros.data.ContentStore
 import com.copte.katameros.databinding.ActivityMainBinding
 import com.copte.katameros.liturgy.Block
 import com.copte.katameros.liturgy.DayRenderer
 import com.copte.katameros.liturgy.Section
-import com.copte.calendar.LiturgyContract
 import com.copte.katameros.ui.AppLabels
+import com.copte.katameros.ui.CalendarActivity
 import com.copte.katameros.ui.DayAdapter
 import com.copte.katameros.ui.DayHeaderAdapter
 import com.copte.katameros.ui.FoldState
-import androidx.recyclerview.widget.ConcatAdapter
 import com.copte.katameros.ui.SettingsActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.time.Instant
@@ -45,12 +47,14 @@ class MainActivity : AppCompatActivity() {
     private val executor = Executors.newSingleThreadExecutor()
     private val main = Handler(Looper.getMainLooper())
     private var generation = 0
-    private val headerAdapter = DayHeaderAdapter()
+    private val headerAdapter = DayHeaderAdapter(
+        onPrevious = { show(date.minusDays(1)) },
+        onNext = { show(date.plusDays(1)) },
+        onPickDate = { pickDate() },
+    )
     private var dayAdapter: DayAdapter? = null
-    /** Replis du jour affiché, conservés quand on bascule de langue. */
+    /** Replis du jour affiché, conservés quand on change la langue des lectures. */
     private val fold = FoldState()
-    /** Lectures affichées dans la seconde langue (bouton de bascule). */
-    private var showSecondary = false
     /** Office à atteindre après affichage (lien `copte://lectures/…`), ou `null`. */
     private var pendingOffice: Int? = null
 
@@ -70,14 +74,9 @@ class MainActivity : AppCompatActivity() {
         binding.list.layoutManager = LinearLayoutManager(this)
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
-                R.id.action_previous -> show(date.minusDays(1))
-                R.id.action_next -> show(date.plusDays(1))
+                R.id.action_language -> chooseLanguage()
+                R.id.action_calendar -> startActivity(Intent(this, CalendarActivity::class.java).putExtra(CalendarActivity.EXTRA_YEAR, date.year))
                 R.id.action_today -> show(LocalDate.now())
-                R.id.action_pick_date -> pickDate()
-                R.id.action_switch_language -> {
-                    showSecondary = !showSecondary
-                    show(date, keepFold = true)
-                }
                 R.id.action_expand_all -> dayAdapter?.setAllExpanded(true)
                 R.id.action_collapse_all -> dayAdapter?.setAllExpanded(false)
                 R.id.action_settings -> startActivity(Intent(this, SettingsActivity::class.java))
@@ -86,7 +85,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
         date = savedInstanceState?.getString(STATE_DATE)?.let(LocalDate::parse) ?: dateFrom(intent) ?: LocalDate.now()
-        showSecondary = savedInstanceState?.getBoolean(STATE_SECONDARY) ?: false
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -97,22 +95,21 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (!::binding.isInitialized) return
-        // Recharge si les réglages ont changé (langues, taille du texte) ou au premier affichage.
-        val settings = "${prefs.primaryLanguage}|${prefs.secondaryLanguage}|${prefs.fontSize}|${ContentStore.source}"
+        // Recharge si les réglages ont changé (langue, taille du texte, contenu) ou au premier affichage.
+        val settings = settingsKey()
         if (settings != shownSettings) {
             shownSettings = settings
             show(date)
         }
     }
 
+    private fun settingsKey() = "${prefs.primaryLanguage}|${prefs.displayLanguage}|${prefs.fontSize}|${ContentStore.source}"
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         // Pas de date à sauver si l'activité a été recréée avant tout affichage (changement de langue) :
         // sinon la date du jour masquerait celle d'un lien copte://.
-        if (::binding.isInitialized) {
-            outState.putString(STATE_DATE, date.toString())
-            outState.putBoolean(STATE_SECONDARY, showSecondary)
-        }
+        if (::binding.isInitialized) outState.putString(STATE_DATE, date.toString())
     }
 
     override fun onDestroy() {
@@ -154,18 +151,41 @@ class MainActivity : AppCompatActivity() {
         picker.show(supportFragmentManager, "date")
     }
 
+    /** Bouton globe : langue des lectures parmi celles du contenu (la langue de l'application en premier). */
+    private fun chooseLanguage() {
+        val anchor = binding.toolbar.findViewById<View>(R.id.action_language) ?: binding.toolbar
+        val current = prefs.displayLanguage ?: prefs.primaryLanguage
+        val codes = listOf(prefs.primaryLanguage) + Prefs.ALL_LANGUAGES.filter { it != prefs.primaryLanguage }
+        PopupMenu(this, anchor).apply {
+            codes.forEachIndexed { i, code ->
+                menu.add(0, i, i, CopticText.style(this@MainActivity, languageName(code), extraSizeSp = 0f)).apply {
+                    isCheckable = true
+                    isChecked = code == current
+                }
+            }
+            menu.setGroupCheckable(0, true, true)
+            setOnMenuItemClickListener { item ->
+                val chosen = codes[item.itemId]
+                if (chosen != current) {
+                    prefs.displayLanguage = chosen
+                    shownSettings = settingsKey()
+                    show(date, keepFold = true)
+                }
+                true
+            }
+            show()
+        }
+    }
+
     /**
-     * Affiche [newDate]. [keepFold] : même jour, autre langue (bascule) : on garde les replis et la position.
+     * Affiche [newDate]. [keepFold] : même jour, autre langue : on garde les replis et la position.
      */
     private fun show(newDate: LocalDate, keepFold: Boolean = false) {
         if (!keepFold || newDate != date) fold.reset()
         date = newDate
         val token = ++generation
         val primaryCode = prefs.primaryLanguage
-        val secondaryCode = prefs.secondaryLanguage
-        if (secondaryCode == null) showSecondary = false
-        updateLanguageButton(primaryCode, secondaryCode)
-        val wantSecondary = showSecondary
+        val displayCode = prefs.displayLanguage
         val scroll = if (keepFold) currentScroll() else null
         binding.progress.visibility = View.VISIBLE
         binding.error.visibility = View.GONE
@@ -174,12 +194,12 @@ class MainActivity : AppCompatActivity() {
             val result = runCatching {
                 val readings = ContentStore.selector().select(newDate)
                 val primary = ContentStore.pack(primaryCode) ?: ContentStore.pack(Prefs.LANG_FR)!!
-                val secondary = if (wantSecondary) secondaryCode?.let(ContentStore::pack) else null
-                // Bascule vers une langue complète (fr, ar, en) : tout passe dans cette langue (titres, Synaxaire).
-                // Vers le copte, qui n'a que les versets : titres et formules restent dans la langue principale.
-                val full = secondary != null && secondary.texts.readings.isNotEmpty()
-                val shown = if (full) secondary!! else primary
-                val versesOnly = if (full) null else secondary
+                val chosen = displayCode?.let(ContentStore::pack)
+                // Langue complète (fr, ar, en) : tout le jour passe dans cette langue (titres, Synaxaire).
+                // Copte, qui n'a que les versets : titres et formules restent dans la langue de l'application.
+                val full = chosen != null && chosen.texts.readings.isNotEmpty()
+                val shown = if (full) chosen!! else primary
+                val versesOnly = if (full) null else chosen
                 val blocks = DayRenderer(shown, versesOnly, AppLabels(localized(shown.code), shown.code)).render(readings)
                 Loaded(
                     day = readings.day,
@@ -226,27 +246,18 @@ class MainActivity : AppCompatActivity() {
             layout.scrollToPositionWithOffset(position, offset)
             return
         }
-        // Lien vers un office : l'ouvrir et aller à son en-tête (+1 pour l'en-tête du jour), sinon en haut.
+        // Lien vers un office : aller à son en-tête (+1 pour l'en-tête du jour), sinon en haut.
         val target = pendingOffice?.let { id -> adapter.positionOfOffice(id) }?.takeIf { it >= 0 }?.plus(headerAdapter.itemCount)
         pendingOffice = null
         layout.scrollToPositionWithOffset(target ?: 0, 0)
     }
 
-    /** Position (élément, décalage) du haut de la liste, pour la retrouver après une bascule de langue. */
+    /** Position (élément, décalage) du haut de la liste, pour la retrouver après un changement de langue. */
     private fun currentScroll(): Pair<Int, Int>? {
         val layout = binding.list.layoutManager as? LinearLayoutManager ?: return null
         val position = layout.findFirstVisibleItemPosition().takeIf { it >= 0 } ?: return null
         val top = layout.findViewByPosition(position)?.top ?: 0
         return position to (top - binding.list.paddingTop)
-    }
-
-    /** Bouton de bascule : visible avec une seconde langue ; son titre dit la langue qu'il affichera. */
-    private fun updateLanguageButton(primary: String, secondary: String?) {
-        val item = binding.toolbar.menu.findItem(R.id.action_switch_language) ?: return
-        item.isVisible = secondary != null
-        if (secondary != null) {
-            item.title = getString(R.string.showing_language, languageName(if (showSecondary) primary else secondary))
-        }
     }
 
     private fun languageName(code: String) = getString(
@@ -279,6 +290,5 @@ class MainActivity : AppCompatActivity() {
     private companion object {
         const val TAG = "MainActivity"
         const val STATE_DATE = "date"
-        const val STATE_SECONDARY = "show_secondary"
     }
 }

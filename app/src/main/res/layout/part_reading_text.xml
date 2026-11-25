@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Une lecture : introduction, référence, versets, conclusion, séparés par des espaces. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/introduction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
         android:textAppearance="@style/TextAppearance.Katameros.Reading"
         android:textStyle="italic" />
 
@@ -16,6 +20,8 @@
         android:id="@+id/reference"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:textAppearance="?attr/textAppearanceLabelLarge"
         android:textColor="?attr/colorPrimary" />
 
@@ -23,7 +29,6 @@
         android:id="@+id/verses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:lineSpacingMultiplier="1.2"
         android:textAppearance="@style/TextAppearance.Katameros.Reading"
         android:textIsSelectable="true" />
@@ -32,7 +37,7 @@
         android:id="@+id/conclusion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:textAppearance="@style/TextAppearance.Katameros.Reading"
         android:textStyle="italic" />
 </LinearLayout>

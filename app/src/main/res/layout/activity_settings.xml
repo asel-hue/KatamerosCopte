@@ -40,15 +40,6 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                style="@style/Widget.Katameros.SettingsLabel"
-                android:text="@string/settings_secondary_language" />
-
-            <RadioGroup
-                android:id="@+id/secondaryGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
                 style="@style/Widget.Katameros.SettingsHeader"
                 android:text="@string/settings_display" />
 
@@ -101,24 +92,11 @@
                 style="@style/Widget.Katameros.SettingsLabel" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/checkUpdates"
+                android:id="@+id/restoreEmbedded"
                 style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/check_updates" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/restoreEmbedded"
-                style="@style/Widget.Material3.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/restore_embedded" />
-
-            <TextView
-                style="@style/Widget.Katameros.SettingsLabel"
-                android:layout_marginTop="16dp"
-                android:text="@string/sources_note"
-                android:textAppearance="?attr/textAppearanceBodySmall" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

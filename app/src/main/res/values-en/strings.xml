@@ -35,8 +35,7 @@
     <string name="season_virgin_fast">Fast of the Virgin</string>
 
     <string name="settings_languages">Languages</string>
-    <string name="settings_primary_language">Main language (also the interface)</string>
-    <string name="settings_secondary_language">Second language (switch button at the top of the screen)</string>
+    <string name="settings_primary_language">App language</string>
     <string name="settings_display">Display</string>
     <string name="settings_font_size">Text size: %1$d</string>
     <string name="settings_theme">Theme</string>
@@ -47,19 +46,17 @@
     <string name="content_version">Content version: %1$d (%2$s)</string>
     <string name="content_embedded">built into the app</string>
     <string name="content_downloaded">downloaded</string>
-    <string name="check_updates">Check for an update</string>
-    <string name="update_done">Content updated (version %1$d).</string>
-    <string name="update_none">The content is already up to date.</string>
-    <string name="update_failed">Update failed: %1$s</string>
     <string name="restore_embedded">Go back to the built-in content</string>
-    <string name="sources_note">Readings and Synaxarium: katameros-api (MIT licence). Bibles: Louis Segond 1910, Van Dyck, NKJV, Coptic Bible.</string>
-
-    <string name="lang_none">None</string>
 
     <string name="permission_read_liturgy_label">Read the Coptic liturgical day</string>
     <string name="permission_read_liturgy_description">Lets another Coptic app from the same publisher read the Coptic date, feast and saints of the day.</string>
-    <string name="switch_language">Switch language</string>
     <string name="expand_all">Expand all</string>
     <string name="collapse_all">Collapse all</string>
-    <string name="showing_language">Readings in %1$s</string>
+    <string name="reading_language">Reading language</string>
+    <string name="calendar">Calendar</string>
+    <string name="calendar_search">Search a feast, a saint</string>
+    <string name="calendar_until">until %1$s</string>
+    <string name="calendar_no_result">No result</string>
+    <string name="previous_year">Previous year</string>
+    <string name="next_year">Next year</string>
 </resources>

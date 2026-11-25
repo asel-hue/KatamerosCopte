@@ -124,6 +124,10 @@ class DayWidgetProvider : AppWidgetProvider() {
                 setTextViewText(R.id.widget_saints, saints)
                 setInt(R.id.widget_saints, "setMaxLines", maxSaints * 2)
                 setViewVisibility(R.id.widget_saints, if (saints.isEmpty()) View.GONE else View.VISIBLE)
+                // Saints du jour non affichés faute de place : « +2 ».
+                val more = info.saints.size - maxSaints
+                setTextViewText(R.id.widget_more, "+$more")
+                setViewVisibility(R.id.widget_more, if (more > 0) View.VISIBLE else View.GONE)
             }
             setOnClickPendingIntent(R.id.widget_root, openDay(context, date))
         }

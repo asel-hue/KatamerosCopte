@@ -6,8 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.copte.katameros.databinding.ItemDayHeaderBinding
 
-/** En-tête du jour (date copte, date grégorienne, fête, temps), premier élément de la liste : il défile avec le texte. */
-class DayHeaderAdapter : RecyclerView.Adapter<DayHeaderAdapter.Holder>() {
+/**
+ * En-tête du jour (date copte, date grégorienne, fête, temps), centré, premier élément de la liste :
+ * flèches de part et d'autre pour changer de jour, toucher sur la date pour ouvrir le calendrier.
+ */
+class DayHeaderAdapter(
+    private val onPrevious: () -> Unit,
+    private val onNext: () -> Unit,
+    private val onPickDate: () -> Unit,
+) : RecyclerView.Adapter<DayHeaderAdapter.Holder>() {
 
     data class Header(val copticDate: String, val gregorianDate: String, val feast: String?, val season: String?)
 
@@ -24,7 +31,11 @@ class DayHeaderAdapter : RecyclerView.Adapter<DayHeaderAdapter.Holder>() {
     override fun getItemCount() = if (header == null) 0 else 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        Holder(ItemDayHeaderBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        Holder(ItemDayHeaderBinding.inflate(LayoutInflater.from(parent.context), parent, false)).apply {
+            binding.previous.setOnClickListener { onPrevious() }
+            binding.next.setOnClickListener { onNext() }
+            binding.dateBlock.setOnClickListener { onPickDate() }
+        }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val h = header ?: return
