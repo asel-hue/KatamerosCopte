@@ -115,3 +115,6 @@ desktop.ini
 # Fichiers temporaires OneDrive / Office
 ~$*
 *.tmp
+
+# Sources brutes téléchargées pour l import (non versionnées)
+.import/

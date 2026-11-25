@@ -1,0 +1,4226 @@
+{
+ "christmas": {
+  "sampleDate": "07-01-2026",
+  "title": "Noël",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.72:10",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.3:23-38",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.72:15",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.1:14-17",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "58.1:1-14*@+58.2:1-4",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "61.1:12-17",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.13:26-33",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.2:7-8",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.2:1-12",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "theophany_paramoun": {
+  "sampleDate": "18-01-2026",
+  "title": "Paramoun de la Théophanie",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.42:2,5",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.4:12-22",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.42:7,8",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.3:22-29",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "46.1:1-17",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "61.1:12-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.16:25-34",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.45:2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.3:1-18",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "temple_entrance": {
+  "sampleDate": "15-02-2025",
+  "title": "Entrée au temple",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.116:16-19",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.2:15-20",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.66:13-15",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.2:40-52",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "50.3:1-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "61.1:12-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.15:13-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.50:14,23",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.2:21-39",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "lent_preparation_saturday": {
+  "sampleDate": "14-02-2026",
+  "title": "Samedi de préparation du Grand Carême",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.17:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.17:3-6",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.119:49,52",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "41.13:33-37",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "47.6:14-18*@+47.7:1-16",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.1:1-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.21:1-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.95:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.13:1-5",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "lent_preparation_sunday": {
+  "sampleDate": "23-02-2025",
+  "title": "Dimanche de préparation du Grand Carême",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.46:10",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "41.11:22-26",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.100:2-3",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.17:3-10",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "47.11:16-28",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "61.1:1-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.21:15-26",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.2:11,10",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.6:1-18",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "nineveh_1": {
+  "sampleDate": "02-02-2026",
+  "title": "Jeûne de Ninive",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "32.1:1-17",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.95:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.13:1-5",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.103:1,8",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.7:6-12",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "45.6:17-23",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "65.1:1-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.2:38-47",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.130:3-4",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.12:35-45",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "nineveh_2": {
+  "sampleDate": "03-02-2026",
+  "title": "Jeûne de Ninive",
+  "sections": [
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "32.2:2-10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.103:14,15,9,10",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.13:6-9",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "51.1:21-29",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.4:3-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.17:30-34",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.85:2-3",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.11:29-36",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "nineveh_3": {
+  "sampleDate": "04-02-2026",
+  "title": "Jeûne de Ninive",
+  "sections": [
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "32.3:1-4:11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.103:13,12",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.11:25-30",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "49.2:1-23",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "62.2:12-17",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.15:12-20",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.32:1,5",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.15:32-39*@+40.16:1-4",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "jonah": {
+  "sampleDate": "05-02-2026",
+  "title": "Fête de Jonas",
+  "sections": [
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.30:10,11",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "41.8:10-21",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "45.10:4-18",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.3:17-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.3:22-26",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.118:5,18",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.2:13-25",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "annunciation": {
+  "sampleDate": "07-04-2025",
+  "title": "Annonciation",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.144:5,7",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.7:36-50",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.72:6-7",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.11:20-28",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "45.3:1-31",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "62.1:1-10*@+62.2:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.7:23-34",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.45:10-11",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.1:26-38",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "month_29": {
+  "sampleDate": "08-11-2026",
+  "title": null,
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.144:5,7",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.7:36-50",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.72:6-7",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.11:20-28",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "45.3:1-31",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "62.1:1-10*@+62.2:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.7:23-34",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.45:10-11",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.1:26-38",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "lazarus_saturday": {
+  "sampleDate": "04-04-2026",
+  "title": "Samedi de Lazare",
+  "sections": [
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.49:1-28",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "23.40:9-31",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "36.3:14-20",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "38.9:9-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.30:3,11",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.18:35-43",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "46.2:1-8",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.1:25*@+60.2:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.27:38-44*@+44.28:1-10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.129:8,2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.11:1-45",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "palm_sunday": {
+  "sampleDate": "05-04-2026",
+  "title": "Dimanche des Rameaux",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.118:26-27",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.12:1-11",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.68:19,35",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.19:1-10",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "58.9:11-28",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.4:1-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.28:11-31",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.81:3,1,2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.21:1-17",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 2,
+        "ref": "41.11:1-11",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 2,
+        "ref": "42.19:29-48",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.65:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.12:12-19",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_monday": {
+  "sampleDate": "06-04-2026",
+  "title": "Lundi Saint",
+  "sections": [
+   {
+    "id": 4,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.1:1-2:3",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.5:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.1:1-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.72:18-19",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "41.11:12-24",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.5:20-30",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.9:12-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.122:1-2",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "41.11:11-19",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.32:7-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "72.1:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.122:4",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.2:13-17",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.2:15-3:24",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.40:1-5",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.1:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.65:5,4",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.21:23-27",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.50:1-3",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.1:20-30",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.13:3-4",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.8:51-59",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.1:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.62:7,6",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.13:23-30",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "39.1:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.13:3,5",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.13:31-35",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "28.4:15-5:7",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.91:2,3",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.21:34-38",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "28.10:12-11:2",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.33:10,11",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.11:37-52",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.5:6-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.122:4",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "41.13:32-37*@+41.14:1-2",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_tuesday": {
+  "sampleDate": "07-04-2026",
+  "title": "Mardi Saint",
+  "sections": [
+   {
+    "id": 4,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.19:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.23:2-24:25",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "28.4:1-8",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.120:2,6,7",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.8:21-29",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "5.8:11-20",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.2:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.27:1-20",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "18.28:1-2",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "11.19:9-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.119:154,155",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.23:37-39*@+40.24:1-2",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.21:3-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.4:20-5:2",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.1:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.18:48,17",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.8:12-20",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.6:5-7:24",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "1.8:1-9:7",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.9:1-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.40:9-31",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "27.7:9-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.8:1-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.25:1,2,3",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.24:3-35",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.30:25-30",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.6:20-7:4",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.45:6*@+19.41:1",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.25:14-46*@+40.26:1-2",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.22:17-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.22:23-29",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.59:16,17",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.22:1-14",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.5:18-27",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.65:4",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.24:36-51",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.16:9-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.102:1,2",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.25:1-13",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "28.9:14-10:2",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.22:20-21",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.23:29-36",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "72.7:24-30",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.57:1",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.11:55-57",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_wednesday": {
+  "sampleDate": "08-04-2026",
+  "title": "Mercredi Saint",
+  "sections": [
+   {
+    "id": 4,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.17:1-7",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.3:5-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "28.5:13-6:3",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.1:20-2:15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.3:12-24",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.51:4*@+19.33:10",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.11:46-57",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.13:17-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.22:7-18",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.27:16-20",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "18.28:1-2",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.4:4-5:4",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.41:6,1",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.22:1-6",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.14:13-15:1",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.48:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.23:7-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.83:2,5",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.12:1-8",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.24:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "4.20:1-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.1:10-23",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.59:1-17",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.11:11-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.41:5-6",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.26:3-16",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.28:16-29",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.6:2*@+19.69:17",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.12:27-36",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.43:5-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.69:1,16",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.10:17-21",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.4:4-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.55:21,1",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "41.14:3-11",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.3:1-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.140:1,2",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.12:36-43",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.20:27-33",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.7:1-2",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.10:29-38",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.8:4-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.62:7,6",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.12:44-50",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_thursday": {
+  "sampleDate": "09-04-2026",
+  "title": "Jeudi Saint",
+  "sections": [
+   {
+    "id": 4,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.17:8-16",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.15:22-16:3",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.58:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.18:20-32",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.1:15-20",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.55:21,12",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "42.22:7-13",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.32:30-33:5",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.24:1-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.9:11-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "20.30:2-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.94:21,23",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.26:17-19",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.7:2-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.20:39-44",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "73.12:13-13:1",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.31:18,13",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "41.14:12-16",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.22:1-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.61:1-7",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.14:17-20",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.27:2-28:13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.23:1,2",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "40.26:17-19",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.52:13-53:12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.19:19-25",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.12:11-13:9",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "38.14:1-4",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "38.14:6-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.50:17,18",
+        "simple": false
+       },
+       {
+        "type": 8,
+        "ref": "43.13:21-30",
+        "simple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.8:17-9:6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.101:1,9",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.13:33-38*@+43.14:1-25",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.14:26-31*@+43.15:1-25",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.15:26-27*@+43.16:1-33",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.17:1-26",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.36:16-23",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.108:1,2",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.26:30-35",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.14:26-31",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.22:31-39",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.18:1,2",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.22:23-28",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.58:2*@+19.68:21",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.26:36-46",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.14:32-42",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.22:40-46",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.18:3-9",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.9:6-10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "26.21:33-37",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.27:3,4",
+        "simple": true
+       },
+       {
+        "type": 1,
+        "ref": "19.34:4,5",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.26:47-58",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.14:43-54",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.22:47-55",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.18:10-14",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.27:11-28:15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.2:1-5",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.26:59-75",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.14:55-72",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.22:56-65",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.18:15-27",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_friday": {
+  "sampleDate": "10-04-2026",
+  "title": "Vendredi Saint",
+  "sections": [
+   {
+    "id": 4,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "5.8:19-9:24",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.1:2-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.2:10-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.22:29-23:6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.24:1-13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "72.2:12-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.12:18-13:1",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.11:11-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "33.1:16-2:3",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "33.7:1-8",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.27:12*@+19.35:11,12,16",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:1-14",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:1-5",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.22:66-71*@+42.23:1-12",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.18:28-40",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "1.48:1-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.50:4-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.3:9-15",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.63:1-7",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.9:4-6",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "30.9:8-10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "18.29:21-30:10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.38:17*@+19.22:16",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:15-26",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:6-25",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.23:13-25",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.19:1-12",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "4.21:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.53:7-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "23.12:2-13:10",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "30.8:9-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "48.6:14-18",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.38:21,22*@+19.22:17,18,19,8,9",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:27-45",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:26-33",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.23:26-44",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.19:13-27",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "24.11:18-12:13",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "38.14:5-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "29.2:1-3",
+        "simple": false
+       },
+       {
+        "type": 7,
+        "ref": "29.2:10-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "50.2:5-11",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.69:2,3,21",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:46-50",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:34-37",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.23:45-46",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.19:28-30",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "2.12:1-14",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "3.23:5-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.143:6,7*@+19.31:5",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:51-56",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:38-41",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.23:47-49",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.19:31-37",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": 14,
+    "subSections": [
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "25.3:1-66",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "readings": [
+       {
+        "type": 7,
+        "ref": "32.1:10-2:8",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.88:6*@+19.23:4*@+19.45:6,8",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "40.27:57-61",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "41.15:42-47*@+41.16:1-1",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "42.23:50-56",
+        "simple": true
+       },
+       {
+        "type": 2,
+        "ref": "43.19:38-42",
+        "simple": true
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "pascha_saturday": {
+  "sampleDate": "11-04-2026",
+  "title": "Samedi Saint",
+  "sections": [
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "46.15:1-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.1:1-9",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.3:12-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.3:5,3*@+19.82:8",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.28:1-20",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "easter": {
+  "sampleDate": "12-04-2026",
+  "title": "Fête de Pâques",
+  "sections": [
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.78:65,69",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "41.16:2-11",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "46.15:23-50",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.3:15-22*@+60.4:1-6",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.2:22-35",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.118:24,25,27",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.20:1-18",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "egypt_entrance": {
+  "sampleDate": "01-06-2026",
+  "title": "Entrée en Egypte",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.105:23,27",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.4:12-17",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.106:21,22,4",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.12:15-23",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "49.2:1-22",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "62.4:7-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.7:20-34",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.105:36,38",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.2:13-23",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "cross_1": {
+  "sampleDate": "27-09-2026",
+  "title": "Fête de la Croix",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.4:6-8",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.8:28-42",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.60:4-5",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.12:26-36",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "46.1:17-31",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.2:11-25",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.10:34-43",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.65:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.10:22-38",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "cross_2": {
+  "sampleDate": "28-09-2026",
+  "title": "Fête de la Croix",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.99:9,5",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.4:19-24",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.118:28,16",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.3:14-21",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "48.6:11-18",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "60.1:3-12",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.4:8-18",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.145:1-2",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "43.6:35-46",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ },
+ "cross_3": {
+  "sampleDate": "29-09-2026",
+  "title": "Fête de la Croix",
+  "sections": [
+   {
+    "id": 1,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.45:6,17",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "40.16:21-26",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "subSections": [
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.74:2,12",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "41.8:34-38*@+41.9:1",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "subSections": [
+     {
+      "id": 3,
+      "readings": [
+       {
+        "type": 3,
+        "ref": "51.2:6-19",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 4,
+      "readings": [
+       {
+        "type": 4,
+        "ref": "62.5:13-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "readings": [
+       {
+        "type": 5,
+        "ref": "44.3:12-21",
+        "simple": false
+       }
+      ]
+     },
+     {
+      "id": 10,
+      "synaxarium": true
+     },
+     {
+      "id": 1,
+      "readings": [
+       {
+        "type": 1,
+        "ref": "19.61:2,3,5",
+        "simple": false
+       },
+       {
+        "type": 2,
+        "ref": "42.14:25-35",
+        "simple": false
+       }
+      ],
+      "introduction": true
+     }
+    ]
+   }
+  ]
+ }
+}

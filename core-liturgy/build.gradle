@@ -22,4 +22,6 @@ kotlin {
 dependencies {
     api rootProject.ext.copticCalendarCore
     testImplementation 'junit:junit:4.13.2'
+    // org.json est fourni par Android à l'exécution, mais pas dans les tests JVM.
+    testImplementation 'org.json:json:20240303'
 }

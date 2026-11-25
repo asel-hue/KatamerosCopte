@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 2,
+  "updatedAt": "2026-11-25",
+  "languages": [
+    {
+      "code": "fr",
+      "name": "Français",
+      "rtl": false
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "rtl": false
+    },
+    {
+      "code": "ar",
+      "name": "العربية",
+      "rtl": true
+    },
+    {
+      "code": "cop",
+      "name": "ⲘⲉⲧⲢⲉⲙⲛ̀ⲭⲏⲙⲓ",
+      "rtl": false
+    }
+  ],
+  "files": {
+    "ar/bible.json": {
+      "sha256": "12974edb2de26d1445b2eb3f83d21feeab6e7029a69af2881d2b91cf0d7d0eb9",
+      "size": 2527093
+    },
+    "ar/synaxarium.json": {
+      "sha256": "3c0ef387174f7d2f1d78b4a79e044adae65b2850e2c6574ac68614cb4795f4e0",
+      "size": 1745362
+    },
+    "ar/texts.json": {
+      "sha256": "6adc533e544aaf6d9429e51cfb350a290bea50de825df5b06d91e610d313379c",
+      "size": 8145
+    },
+    "cop/bible.json": {
+      "sha256": "5bec35871e37a7fa8b24afc543b42f5586e27dede5e00b9b707a78be29e83b76",
+      "size": 2817727
+    },
+    "cop/texts.json": {
+      "sha256": "0d1451ff042584245ea498015685a2c35988ac7f9e030cfdce14533d9f4cb323",
+      "size": 168
+    },
+    "en/bible.json": {
+      "sha256": "429afca96c683fda41c7d661a055d5aee586abe8364d2bf904daaf3dddc4d570",
+      "size": 1395475
+    },
+    "en/synaxarium.json": {
+      "sha256": "9261769433a9191d0a44ceb9f0acdcf9c979696ddc71e22c4f749f78e4abfbb0",
+      "size": 1506774
+    },
+    "en/texts.json": {
+      "sha256": "85c60819ab60e268b962f54d70bb7774e40ce9107b13af66be680951d95e966e",
+      "size": 6161
+    },
+    "fr/bible.json": {
+      "sha256": "96e83e7e97ad7bc3d73c7e8d9a2461a645c7da79a4b8d5d69e9b6ed7be814242",
+      "size": 1532316
+    },
+    "fr/synaxarium.json": {
+      "sha256": "fcec32122d163dd43fb3543a072c01ec4beddd8f14161123e9f61ff43fd60e97",
+      "size": 1486648
+    },
+    "fr/texts.json": {
+      "sha256": "594267883d9de94525c8f4ddb1d37238d7321ebed3668f9b480c9d8b30f41e63",
+      "size": 6645
+    },
+    "lectionary.json": {
+      "sha256": "35352427eda63098f3b32883280a74a586880e93190f447577277c2b2d4e28c5",
+      "size": 163340
+    }
+  }
+}
