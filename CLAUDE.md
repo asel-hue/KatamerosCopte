@@ -16,7 +16,7 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
 ## Règles
 - Langues : français (principale), arabe (RTL), anglais. Le copte sert aux titres et aux répons, avec la police `res/font/noto_sans_coptic.ttf` appliquée via `CopticText`.
 - Textes liturgiques : appliquer les skills `glossaire-copte-orthodoxe` et `sources-citations-coptes`. Ne jamais inventer un texte ni une référence biblique.
-- Source des lectures : `pierresaid/katameros-api`. **L'import est bloqué tant que la licence et l'accord de l'auteur ne sont pas confirmés.**
+- Source des lectures : `pierresaid/katameros-api` (MIT, accord confirmé par Antoine). Détails et réserve sur la NKJV dans `docs/SOURCES.md`.
 - Les identifiants (lectures, saints, fêtes) et les clés de jour « MM-JJ » sont stables : ne jamais les renuméroter.
 - Contrat d'intégration avec les autres applications d'offices :
   - deep link `copte://jour/{AAAA-MM-JJ}` ;
@@ -32,7 +32,10 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
 ## Phases
 1. Squelette : dépôts, modules, agents. **Fait.**
 2. `coptic-calendar-core` 0.2.0 : conversion des dates, Pâques, fêtes mobiles, `LiturgicalDay`, tests. **Fait.** Points liturgiques à faire confirmer : voir le README de la bibliothèque.
-3. Import des données (après l'accord de licence) et validation.
+3. Import des données et validation. **Fait.**
+   - `scripts/import_katameros.py` puis `scripts/validate_content.py --write` : à relancer après toute modification du contenu.
+   - Le choix des lectures du jour est dans `core-liturgy/DaySelector.kt`.
+   - Les documents d'Antoine (traductions de Naguy Wasfy, diaporamas READINGS_*) sont dans `../ressources-coptes/` (voir `INDEX.md`). Ils pourront servir de texte français relu, après conversion des polices coptes anciennes.
 4. Écran Aujourd'hui et lecteur des lectures.
 5. Widget.
 6. Contrat d'intégration (deep links, ContentProvider), puis publication sur JitPack.
