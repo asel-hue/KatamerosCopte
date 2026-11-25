@@ -36,7 +36,7 @@
 
     <string name="settings_languages">Languages</string>
     <string name="settings_primary_language">Main language (also the interface)</string>
-    <string name="settings_secondary_language">Second language, under each reading</string>
+    <string name="settings_secondary_language">Second language (switch button at the top of the screen)</string>
     <string name="settings_display">Display</string>
     <string name="settings_font_size">Text size: %1$d</string>
     <string name="settings_theme">Theme</string>
@@ -58,4 +58,8 @@
 
     <string name="permission_read_liturgy_label">Read the Coptic liturgical day</string>
     <string name="permission_read_liturgy_description">Lets another Coptic app from the same publisher read the Coptic date, feast and saints of the day.</string>
+    <string name="switch_language">Switch language</string>
+    <string name="expand_all">Expand all</string>
+    <string name="collapse_all">Collapse all</string>
+    <string name="showing_language">Readings in %1$s</string>
 </resources>

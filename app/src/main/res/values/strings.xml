@@ -40,7 +40,7 @@
     <!-- Réglages -->
     <string name="settings_languages">Langues</string>
     <string name="settings_primary_language">Langue principale (et de l\'interface)</string>
-    <string name="settings_secondary_language">Seconde langue, sous chaque lecture</string>
+    <string name="settings_secondary_language">Seconde langue (bouton de bascule en haut de l\'écran)</string>
     <string name="settings_display">Affichage</string>
     <string name="settings_font_size">Taille du texte : %1$d</string>
     <string name="settings_theme">Thème</string>
@@ -66,4 +66,8 @@
 
     <string name="permission_read_liturgy_label">Lire le jour liturgique copte</string>
     <string name="permission_read_liturgy_description">Permet à une autre application copte signée par le même éditeur de lire la date copte, la fête et les saints du jour.</string>
+    <string name="switch_language">Changer de langue</string>
+    <string name="expand_all">Tout déplier</string>
+    <string name="collapse_all">Tout replier</string>
+    <string name="showing_language">Lectures en %1$s</string>
 </resources>

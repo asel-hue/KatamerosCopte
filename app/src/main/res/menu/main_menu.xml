@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Bascule entre la langue principale et la seconde langue (visible si une seconde langue est choisie). -->
+    <item
+        android:id="@+id/action_switch_language"
+        android:icon="@drawable/ic_translate"
+        android:title="@string/switch_language"
+        android:visible="false"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_previous"
         android:icon="@drawable/ic_chevron_left"
@@ -20,7 +27,17 @@
         android:id="@+id/action_pick_date"
         android:icon="@drawable/ic_calendar"
         android:title="@string/choose_date"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_expand_all"
+        android:icon="@drawable/ic_unfold_more"
+        android:title="@string/expand_all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_collapse_all"
+        android:icon="@drawable/ic_unfold_less"
+        android:title="@string/collapse_all"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_settings"

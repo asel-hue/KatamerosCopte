@@ -36,7 +36,7 @@
 
     <string name="settings_languages">اللغات</string>
     <string name="settings_primary_language">اللغة الأساسية (ولغة الواجهة)</string>
-    <string name="settings_secondary_language">لغة ثانية تحت كل قراءة</string>
+    <string name="settings_secondary_language">لغة ثانية (زر التبديل أعلى الشاشة)</string>
     <string name="settings_display">العرض</string>
     <string name="settings_font_size">حجم الخط: %1$d</string>
     <string name="settings_theme">المظهر</string>
@@ -58,4 +58,8 @@
 
     <string name="permission_read_liturgy_label">قراءة اليوم الطقسي القبطي</string>
     <string name="permission_read_liturgy_description">يسمح لتطبيق قبطي آخر من نفس الناشر بقراءة التاريخ القبطي والعيد وقديسي اليوم.</string>
+    <string name="switch_language">تبديل اللغة</string>
+    <string name="expand_all">فتح الكل</string>
+    <string name="collapse_all">طي الكل</string>
+    <string name="showing_language">القراءات بـ %1$s</string>
 </resources>

@@ -7,6 +7,8 @@
         <item name="colorOnPrimaryContainer">@color/copte_on_primary_container</item>
         <item name="colorSecondary">@color/copte_secondary</item>
         <item name="colorOnSecondary">@color/copte_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/copte_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/copte_on_secondary_container</item>
     </style>
 
     <!-- Texte de lecture : police serif, comme LivreAGPIA. -->

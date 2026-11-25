@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Titre d'office (Veille, Matin, Messe, heures) : centré, chevron en bout de ligne. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="12dp"
+    android:layout_marginTop="16dp"
     android:background="?attr/selectableItemBackground"
-    android:gravity="center_vertical"
-    android:minHeight="48dp"
-    android:orientation="horizontal"
-    android:paddingStart="16dp"
-    android:paddingEnd="12dp">
+    android:minHeight="56dp">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:paddingStart="48dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="48dp"
+        android:paddingBottom="8dp"
         android:textAppearance="@style/TextAppearance.Katameros.Title"
         android:textColor="?attr/colorPrimary"
         android:textStyle="bold" />
@@ -23,6 +25,8 @@
         android:id="@+id/chevron"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="16dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_expand_more" />
-</LinearLayout>
+</FrameLayout>

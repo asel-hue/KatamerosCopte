@@ -6,4 +6,6 @@
     <color name="copte_on_primary_container">#FFEADDFF</color>
     <color name="copte_secondary">#FFE2C46B</color>
     <color name="copte_on_secondary">#FF3F2E00</color>
+    <color name="copte_secondary_container">#FF4D3D00</color>
+    <color name="copte_on_secondary_container">#FFFFE08A</color>
 </resources>

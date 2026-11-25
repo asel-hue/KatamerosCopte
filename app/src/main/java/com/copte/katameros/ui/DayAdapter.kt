@@ -24,30 +24,80 @@ import com.copte.katameros.liturgy.ReadingText
 import com.google.android.material.color.MaterialColors
 
 /**
- * Liste d'un jour : offices repliables, rubriques, lectures (langue principale puis seconde langue)
- * et commémorations du Synaxaire (titre, texte déplié au toucher).
+ * État replié / déplié d'un jour, conservé quand on bascule de langue.
+ * Par défaut : offices ouverts, rubriques (Psaume et Évangile, Épître…) repliées.
+ */
+class FoldState {
+    val collapsedOffices = mutableSetOf<Int>()
+    /** Rubriques ouvertes, clé « office:rang de la rubrique dans l'office ». */
+    val openSubSections = mutableSetOf<String>()
+    val openCommemorations = mutableSetOf<String>()
+
+    fun reset() {
+        collapsedOffices.clear()
+        openSubSections.clear()
+        openCommemorations.clear()
+    }
+}
+
+/**
+ * Liste d'un jour : offices et rubriques sous forme de titres centrés repliables, lectures,
+ * commémorations du Synaxaire (titre, texte déplié au toucher).
+ *
+ * @param preferSecondary afficher le texte de la seconde langue des lectures (bascule vers le copte,
+ *   qui n'a que les versets : introductions et conclusions restent dans la langue principale).
  */
 class DayAdapter(
     private val context: Context,
     private val fontSizeSp: Float,
-    private val primaryRtl: Boolean,
+    private val rtl: Boolean,
     private val secondaryRtl: Boolean,
+    private val preferSecondary: Boolean,
+    private val fold: FoldState,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var blocks: List<Block> = emptyList()
-    private var visible: List<Block> = emptyList()
-    private val collapsed = mutableSetOf<Int>()
-    private val openCommemorations = mutableSetOf<Block.CommemorationBlock>()
+    /** Clé de la rubrique de chaque élément (« office:rang »), `null` pour un en-tête d'office. */
+    private var keys: List<String?> = emptyList()
+    private var visible: List<Int> = emptyList()
 
     fun submit(newBlocks: List<Block>) {
         blocks = newBlocks
-        collapsed.clear()
-        openCommemorations.clear()
+        var rank = -1
+        var lastSection = -1
+        keys = newBlocks.map { b ->
+            if (b.section != lastSection) { lastSection = b.section; rank = -1 }
+            when (b) {
+                is Block.OfficeHeader -> null
+                is Block.SubHeader -> { rank++; "${b.section}:$rank" }
+                else -> "${b.section}:${rank.coerceAtLeast(0)}"
+            }
+        }
+        refresh()
+    }
+
+    /** Ouvre ou ferme tout (offices et rubriques). */
+    fun setAllExpanded(expanded: Boolean) {
+        fold.collapsedOffices.clear()
+        fold.openSubSections.clear()
+        if (expanded) {
+            blocks.indices.filter { blocks[it] is Block.SubHeader }.mapNotNullTo(fold.openSubSections) { keys[it] }
+        } else {
+            blocks.filterIsInstance<Block.OfficeHeader>().mapTo(fold.collapsedOffices) { it.section }
+        }
         refresh()
     }
 
     private fun refresh() {
-        visible = blocks.filter { it is Block.OfficeHeader || it.section !in collapsed }
+        visible = blocks.indices.filter { i ->
+            val b = blocks[i]
+            when {
+                b is Block.OfficeHeader -> true
+                b.section in fold.collapsedOffices -> false
+                b is Block.SubHeader -> true
+                else -> keys[i] in fold.openSubSections
+            }
+        }
         @Suppress("NotifyDataSetChanged")
         notifyDataSetChanged()
     }
@@ -56,9 +106,9 @@ class DayAdapter(
 
     /** Position de l'en-tête de l'office [sectionId] (1 Veille, 2 Matin, 3 Messe), ou -1. */
     fun positionOfOffice(sectionId: Int): Int =
-        visible.indexOfFirst { it is Block.OfficeHeader && it.sectionId == sectionId }
+        visible.indexOfFirst { (blocks[it] as? Block.OfficeHeader)?.sectionId == sectionId }
 
-    override fun getItemViewType(position: Int) = when (visible[position]) {
+    override fun getItemViewType(position: Int) = when (blocks[visible[position]]) {
         is Block.OfficeHeader -> 0
         is Block.SubHeader -> 1
         is Block.ReadingBlock -> 2
@@ -79,63 +129,83 @@ class DayAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val b = (holder as Holder).binding
-        when (val block = visible[position]) {
+        val index = visible[position]
+        when (val block = blocks[index]) {
             is Block.OfficeHeader -> bindOffice(b as ItemOfficeBinding, block)
-            is Block.SubHeader -> {
-                b as ItemSubheaderBinding
-                b.title.setTextOrHide(block.title)
-                b.introduction.setTextOrHide(block.introduction)
-                b.introduction.sized(-3f)
-                direction(b.root, primaryRtl)
-            }
-            is Block.ReadingBlock -> {
-                b as ItemReadingBinding
-                bindText(b.primary, block.primary, primaryRtl)
-                val second = block.secondary?.takeIf { it.verses.isNotEmpty() }
-                b.divider.visibility = if (second != null) View.VISIBLE else View.GONE
-                b.secondary.root.visibility = if (second != null) View.VISIBLE else View.GONE
-                if (second != null) bindText(b.secondary, second, secondaryRtl)
-            }
-            is Block.CommemorationBlock -> bindCommemoration(b as ItemCommemorationBinding, block)
+            is Block.SubHeader -> bindSubHeader(b as ItemSubheaderBinding, block, keys[index]!!)
+            is Block.ReadingBlock -> bindReading(b as ItemReadingBinding, block)
+            is Block.CommemorationBlock -> bindCommemoration(b as ItemCommemorationBinding, block, "${keys[index]}:$index")
         }
     }
 
     private fun bindOffice(b: ItemOfficeBinding, block: Block.OfficeHeader) {
         b.title.text = block.title
-        val isCollapsed = block.section in collapsed
-        b.chevron.rotation = if (isCollapsed) 0f else 180f
+        val open = block.section !in fold.collapsedOffices
+        b.chevron.rotation = if (open) 180f else 0f
         b.root.setOnClickListener {
-            if (!collapsed.remove(block.section)) collapsed += block.section
+            if (!fold.collapsedOffices.remove(block.section)) fold.collapsedOffices += block.section
             refresh()
         }
     }
 
-    private fun bindCommemoration(b: ItemCommemorationBinding, block: Block.CommemorationBlock) {
+    private fun bindSubHeader(b: ItemSubheaderBinding, block: Block.SubHeader, key: String) {
+        direction(b.root, rtl)
+        b.title.text = block.title ?: ""
+        val open = key in fold.openSubSections
+        b.chevron.rotation = if (open) 180f else 0f
+        // L'introduction (« Levons-nous avec crainte de Dieu… ») fait partie du contenu : visible une fois ouvert.
+        b.introduction.setTextOrHide(if (open) block.introduction else null)
+        b.introduction.sized(-3f)
+        b.header.setOnClickListener {
+            if (!fold.openSubSections.remove(key)) fold.openSubSections += key
+            refresh()
+        }
+    }
+
+    private fun bindReading(b: ItemReadingBinding, block: Block.ReadingBlock) {
+        val second = block.secondary?.takeIf { preferSecondary && it.verses.isNotEmpty() }
+        if (second != null) {
+            // Copte : seuls les versets existent, on garde les formules de la langue principale.
+            val text = second.copy(
+                introduction = second.introduction ?: block.primary.introduction,
+                conclusion = second.conclusion ?: block.primary.conclusion,
+            )
+            bindText(b.primary, text, secondaryRtl, introRtl = rtl)
+        } else {
+            bindText(b.primary, block.primary, rtl, introRtl = rtl)
+        }
+        b.divider.visibility = View.GONE
+        b.secondary.root.visibility = View.GONE
+    }
+
+    private fun bindCommemoration(b: ItemCommemorationBinding, block: Block.CommemorationBlock, key: String) {
         b.title.text = block.commemoration.title
-        b.title.sized(0f)
-        val open = block in openCommemorations
+        b.title.sized(-1f)
+        val open = key in fold.openCommemorations
         b.chevron.rotation = if (open) 180f else 0f
         b.body.visibility = if (open) View.VISIBLE else View.GONE
         if (open) {
             b.body.text = HtmlCompat.fromHtml(block.commemoration.html, HtmlCompat.FROM_HTML_MODE_COMPACT).trimEnd()
             b.body.sized(0f)
         }
-        direction(b.root, primaryRtl)
+        direction(b.root, rtl)
         b.root.setOnClickListener {
-            if (!openCommemorations.remove(block)) openCommemorations += block
-            notifyItemChanged(visible.indexOf(block))
+            if (!fold.openCommemorations.remove(key)) fold.openCommemorations += key
+            notifyItemChanged(visible.indexOf(blocks.indexOf(block)))
         }
     }
 
-    private fun bindText(b: PartReadingTextBinding, text: ReadingText, rtl: Boolean) {
-        direction(b.root, rtl)
+    private fun bindText(b: PartReadingTextBinding, text: ReadingText, textRtl: Boolean, introRtl: Boolean) {
+        direction(b.root, textRtl)
         b.introduction.setTextOrHide(text.introduction?.let { CopticText.style(context, it) })
         b.introduction.sized(-3f)
+        b.conclusion.setTextOrHide(text.conclusion?.let { CopticText.style(context, it) })
+        b.conclusion.sized(-3f)
+        // Formules (introduction, conclusion) dans le sens de leur propre langue.
+        listOf(b.introduction, b.conclusion).forEach { direction(it, introRtl) }
         b.reference.text = text.reference
         b.verses.text = CopticText.style(context, versesText(text))
         b.verses.sized(0f)
-        b.conclusion.setTextOrHide(text.conclusion?.let { CopticText.style(context, it) })
-        b.conclusion.sized(-3f)
     }
 
     /** Versets à la suite, numéros en exposant ; « chapitre:verset » quand le chapitre change. */

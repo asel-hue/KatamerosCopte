@@ -21,6 +21,7 @@ import com.copte.calendar.LiturgyContract
 import com.copte.katameros.ui.AppLabels
 import com.copte.katameros.ui.DayAdapter
 import com.copte.katameros.ui.DayHeaderAdapter
+import com.copte.katameros.ui.FoldState
 import androidx.recyclerview.widget.ConcatAdapter
 import com.copte.katameros.ui.SettingsActivity
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -45,6 +46,11 @@ class MainActivity : AppCompatActivity() {
     private val main = Handler(Looper.getMainLooper())
     private var generation = 0
     private val headerAdapter = DayHeaderAdapter()
+    private var dayAdapter: DayAdapter? = null
+    /** Replis du jour affiché, conservés quand on bascule de langue. */
+    private val fold = FoldState()
+    /** Lectures affichées dans la seconde langue (bouton de bascule). */
+    private var showSecondary = false
     /** Office à atteindre après affichage (lien `copte://lectures/…`), ou `null`. */
     private var pendingOffice: Int? = null
 
@@ -68,12 +74,19 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_next -> show(date.plusDays(1))
                 R.id.action_today -> show(LocalDate.now())
                 R.id.action_pick_date -> pickDate()
+                R.id.action_switch_language -> {
+                    showSecondary = !showSecondary
+                    show(date, keepFold = true)
+                }
+                R.id.action_expand_all -> dayAdapter?.setAllExpanded(true)
+                R.id.action_collapse_all -> dayAdapter?.setAllExpanded(false)
                 R.id.action_settings -> startActivity(Intent(this, SettingsActivity::class.java))
                 else -> return@setOnMenuItemClickListener false
             }
             true
         }
         date = savedInstanceState?.getString(STATE_DATE)?.let(LocalDate::parse) ?: dateFrom(intent) ?: LocalDate.now()
+        showSecondary = savedInstanceState?.getBoolean(STATE_SECONDARY) ?: false
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -96,7 +109,10 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         // Pas de date à sauver si l'activité a été recréée avant tout affichage (changement de langue) :
         // sinon la date du jour masquerait celle d'un lien copte://.
-        if (::binding.isInitialized) outState.putString(STATE_DATE, date.toString())
+        if (::binding.isInitialized) {
+            outState.putString(STATE_DATE, date.toString())
+            outState.putBoolean(STATE_SECONDARY, showSecondary)
+        }
     }
 
     override fun onDestroy() {
@@ -138,12 +154,19 @@ class MainActivity : AppCompatActivity() {
         picker.show(supportFragmentManager, "date")
     }
 
-    private fun show(newDate: LocalDate) {
+    /**
+     * Affiche [newDate]. [keepFold] : même jour, autre langue (bascule) : on garde les replis et la position.
+     */
+    private fun show(newDate: LocalDate, keepFold: Boolean = false) {
+        if (!keepFold || newDate != date) fold.reset()
         date = newDate
         val token = ++generation
         val primaryCode = prefs.primaryLanguage
         val secondaryCode = prefs.secondaryLanguage
-        val labels = AppLabels(this, primaryCode)
+        if (secondaryCode == null) showSecondary = false
+        updateLanguageButton(primaryCode, secondaryCode)
+        val wantSecondary = showSecondary
+        val scroll = if (keepFold) currentScroll() else null
         binding.progress.visibility = View.VISIBLE
         binding.error.visibility = View.GONE
         executor.execute {
@@ -151,9 +174,22 @@ class MainActivity : AppCompatActivity() {
             val result = runCatching {
                 val readings = ContentStore.selector().select(newDate)
                 val primary = ContentStore.pack(primaryCode) ?: ContentStore.pack(Prefs.LANG_FR)!!
-                val secondary = secondaryCode?.let(ContentStore::pack)
-                val blocks = DayRenderer(primary, secondary, labels).render(readings)
-                Loaded(readings.day, readings.titleKey?.let { primary.texts.feasts[it] }, blocks, primary.rtl, secondary?.rtl ?: false)
+                val secondary = if (wantSecondary) secondaryCode?.let(ContentStore::pack) else null
+                // Bascule vers une langue complète (fr, ar, en) : tout passe dans cette langue (titres, Synaxaire).
+                // Vers le copte, qui n'a que les versets : titres et formules restent dans la langue principale.
+                val full = secondary != null && secondary.texts.readings.isNotEmpty()
+                val shown = if (full) secondary!! else primary
+                val versesOnly = if (full) null else secondary
+                val blocks = DayRenderer(shown, versesOnly, AppLabels(localized(shown.code), shown.code)).render(readings)
+                Loaded(
+                    day = readings.day,
+                    title = readings.titleKey?.let { primary.texts.feasts[it] },
+                    blocks = blocks,
+                    rtl = shown.rtl,
+                    secondaryRtl = versesOnly?.rtl ?: false,
+                    preferSecondary = versesOnly != null,
+                    scroll = scroll,
+                )
             }
             Log.i(TAG, "Lectures du $newDate (${result.getOrNull()?.blocks?.size} éléments) en ${(System.nanoTime() - started) / 1_000_000} ms")
             main.post {
@@ -173,20 +209,59 @@ class MainActivity : AppCompatActivity() {
         val day: com.copte.calendar.LiturgicalDay,
         val title: String?,
         val blocks: List<Block>,
-        val primaryRtl: Boolean,
+        val rtl: Boolean,
         val secondaryRtl: Boolean,
+        val preferSecondary: Boolean,
+        val scroll: Pair<Int, Int>?,
     )
 
     private fun display(loaded: Loaded) {
         updateHeader(date, loaded.title, AppLabels(this, prefs.primaryLanguage).season(loaded.day.season))
-        val adapter = DayAdapter(this, prefs.fontSize, loaded.primaryRtl, loaded.secondaryRtl)
+        val adapter = DayAdapter(this, prefs.fontSize, loaded.rtl, loaded.secondaryRtl, loaded.preferSecondary, fold)
+        dayAdapter = adapter
         binding.list.adapter = ConcatAdapter(headerAdapter, adapter)
         adapter.submit(loaded.blocks)
-        // Lien vers un office : aller à son en-tête (s'il existe ce jour-là ; +1 pour l'en-tête du jour), sinon en haut.
+        val layout = binding.list.layoutManager as LinearLayoutManager
+        loaded.scroll?.let { (position, offset) ->
+            layout.scrollToPositionWithOffset(position, offset)
+            return
+        }
+        // Lien vers un office : l'ouvrir et aller à son en-tête (+1 pour l'en-tête du jour), sinon en haut.
         val target = pendingOffice?.let { id -> adapter.positionOfOffice(id) }?.takeIf { it >= 0 }?.plus(headerAdapter.itemCount)
         pendingOffice = null
-        (binding.list.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(target ?: 0, 0)
+        layout.scrollToPositionWithOffset(target ?: 0, 0)
     }
+
+    /** Position (élément, décalage) du haut de la liste, pour la retrouver après une bascule de langue. */
+    private fun currentScroll(): Pair<Int, Int>? {
+        val layout = binding.list.layoutManager as? LinearLayoutManager ?: return null
+        val position = layout.findFirstVisibleItemPosition().takeIf { it >= 0 } ?: return null
+        val top = layout.findViewByPosition(position)?.top ?: 0
+        return position to (top - binding.list.paddingTop)
+    }
+
+    /** Bouton de bascule : visible avec une seconde langue ; son titre dit la langue qu'il affichera. */
+    private fun updateLanguageButton(primary: String, secondary: String?) {
+        val item = binding.toolbar.menu.findItem(R.id.action_switch_language) ?: return
+        item.isVisible = secondary != null
+        if (secondary != null) {
+            item.title = getString(R.string.showing_language, languageName(if (showSecondary) primary else secondary))
+        }
+    }
+
+    private fun languageName(code: String) = getString(
+        when (code) {
+            Prefs.LANG_AR -> R.string.lang_ar
+            Prefs.LANG_EN -> R.string.lang_en
+            Prefs.LANG_COP -> R.string.lang_cop
+            else -> R.string.lang_fr
+        }
+    )
+
+    /** Contexte dans la langue [code] (noms des mois et formules du Synaxaire dans la langue affichée). */
+    private fun localized(code: String) = createConfigurationContext(
+        android.content.res.Configuration(resources.configuration).apply { setLocale(java.util.Locale.forLanguageTag(code)) }
+    )
 
     private fun updateHeader(day: LocalDate, feast: String?, season: String?) {
         val coptic = com.copte.calendar.CopticCalendar.fromGregorian(day)
@@ -204,5 +279,6 @@ class MainActivity : AppCompatActivity() {
     private companion object {
         const val TAG = "MainActivity"
         const val STATE_DATE = "date"
+        const val STATE_SECONDARY = "show_secondary"
     }
 }
