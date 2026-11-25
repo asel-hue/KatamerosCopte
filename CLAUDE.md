@@ -31,7 +31,7 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
 
 ## Phases
 1. Squelette : dépôts, modules, agents. **Fait.**
-2. `coptic-calendar-core` : conversion des dates, Pâques, fêtes mobiles, `LiturgicalDay`, tests.
+2. `coptic-calendar-core` 0.2.0 : conversion des dates, Pâques, fêtes mobiles, `LiturgicalDay`, tests. **Fait.** Points liturgiques à faire confirmer : voir le README de la bibliothèque.
 3. Import des données (après l'accord de licence) et validation.
 4. Écran Aujourd'hui et lecteur des lectures.
 5. Widget.

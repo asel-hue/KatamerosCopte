@@ -6,8 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
-import com.copte.calendar.CopticMonth
+import com.copte.calendar.LiturgicalCalendar
 import com.copte.katameros.databinding.ActivityMainBinding
+import java.time.LocalDate
 
 /** Écran « Aujourd'hui ». Squelette de la phase 1 : il vérifie seulement que la bibliothèque est branchée. */
 class MainActivity : AppCompatActivity() {
@@ -24,6 +25,12 @@ class MainActivity : AppCompatActivity() {
             v.updatePadding(top = bars.top, bottom = bars.bottom)
             insets
         }
-        binding.placeholder.text = getString(R.string.placeholder_today, CopticMonth.entries.size)
+        // Provisoire (phase 4 : vrais libellés des mois, fêtes et lectures).
+        val today = LiturgicalCalendar.dayOf(LocalDate.now())
+        binding.placeholder.text = getString(
+            R.string.placeholder_today,
+            today.coptic.day, today.coptic.month.number, today.coptic.year,
+            (listOf(today.season.id) + today.feasts.map { it.id }).joinToString(" · "),
+        )
     }
 }
