@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Katameros" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/copte_primary</item>
+        <item name="colorOnPrimary">@color/copte_on_primary</item>
+        <item name="colorPrimaryContainer">@color/copte_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/copte_on_primary_container</item>
+        <item name="colorSecondary">@color/copte_secondary</item>
+        <item name="colorOnSecondary">@color/copte_on_secondary</item>
+    </style>
+
+    <!-- Texte de lecture : police serif, comme LivreAGPIA. -->
+    <style name="TextAppearance.Katameros.Reading" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">serif</item>
+        <item name="fontFamily">serif</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextAppearance.Katameros.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">serif</item>
+        <item name="fontFamily">serif</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+</resources>

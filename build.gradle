@@ -1,0 +1,10 @@
+// AGP 9.x embarque le support Kotlin : le plugin org.jetbrains.kotlin.android ne doit pas être appliqué.
+plugins {
+    id 'com.android.application' version '9.2.1' apply false
+    id 'com.android.library' version '9.2.1' apply false
+}
+
+ext {
+    // Version de la bibliothèque partagée (tag JitPack). Remplacée par le dossier local s'il existe.
+    copticCalendarCore = 'com.github.asel-hue:coptic-calendar-core:0.1.0'
+}

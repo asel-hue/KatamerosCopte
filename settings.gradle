@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // com.github.asel-hue:coptic-calendar-core
+    }
+}
+
+rootProject.name = "KatamerosCopte"
+include ':app', ':core-liturgy', ':widget'
+
+// Développement local : si le dépôt coptic-calendar-core est cloné à côté, on l'utilise directement
+// (composite build) au lieu de la version publiée sur JitPack.
+def localCalendar = file('../coptic-calendar-core')
+if (localCalendar.exists()) {
+    includeBuild(localCalendar) {
+        dependencySubstitution {
+            substitute module('com.github.asel-hue:coptic-calendar-core') using project(':')
+        }
+    }
+}

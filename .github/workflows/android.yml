@@ -1,0 +1,35 @@
+name: Android
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: KatamerosCopte
+      # La bibliothèque est clonée à côté pour tester la version en cours (composite build).
+      - uses: actions/checkout@v4
+        with:
+          repository: asel-hue/coptic-calendar-core
+          path: coptic-calendar-core
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build et tests
+        working-directory: KatamerosCopte
+        # gradle.properties force le JDK d'Android Studio (Windows) : on le remplace en CI.
+        run: |
+          sed -i '/org.gradle.java.home/d' gradle.properties
+          chmod +x gradlew
+          ./gradlew assembleDebug test --no-daemon
+      - name: Validation du contenu
+        working-directory: KatamerosCopte
+        run: |
+          if [ -f scripts/validate_content.py ]; then python3 scripts/validate_content.py; else echo "Pas encore de contenu (phase 3)"; fi

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coptic Readings</string>
+    <string name="placeholder_today">Daily readings: coming soon.\n(%1$d Coptic months loaded)</string>
+</resources>

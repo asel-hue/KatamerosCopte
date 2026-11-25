@@ -1,0 +1,25 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+// Widget d'écran d'accueil : date copte du jour + saint ou fête (phase 5).
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.copte.katameros.widget'
+    compileSdk 36
+    defaultConfig { minSdk 26 }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    compilerOptions { jvmTarget = JvmTarget.JVM_17 }
+}
+
+dependencies {
+    implementation project(':core-liturgy')
+    implementation 'androidx.core:core-ktx:1.17.0'
+}

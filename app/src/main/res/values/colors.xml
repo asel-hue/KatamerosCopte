@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette commune aux applications coptes (reprise de LivreAGPIA : violet / or). -->
+    <color name="copte_primary">#FF5E35B1</color>
+    <color name="copte_on_primary">#FFFFFFFF</color>
+    <color name="copte_primary_container">#FFE8DEF8</color>
+    <color name="copte_on_primary_container">#FF21005D</color>
+    <color name="copte_secondary">#FF8D6E00</color>
+    <color name="copte_on_secondary">#FFFFFFFF</color>
+</resources>
