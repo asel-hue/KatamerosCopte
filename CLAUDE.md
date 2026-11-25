@@ -27,7 +27,8 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
 ## Build (Windows, OneDrive)
 - Gradle ne peut pas ouvrir de connexion locale depuis le bac à sable de Claude. Il faut lancer les builds dans le **terminal intégré** (`run_in_terminal`) ou dans Android Studio.
 - `.\gradlew.bat assembleDebug`, `.\gradlew.bat test`, et dans `../coptic-calendar-core` : `.\gradlew.bat test`.
-- Le cache de build est désactivé à cause de OneDrive (`gradle.properties`).
+- Le cache de build est désactivé à cause de OneDrive (`gradle.properties`), et les sorties de build vont dans `%LOCALAPPDATA%\gradle-builds\KatamerosCopte` (voir `build.gradle`). L'APK de debug s'y trouve.
+- Émulateur : la variable ANDROID_SDK_ROOT du poste pointe vers `C:\devndroid-sdk` (inexistant) ; la forcer sur `%LOCALAPPDATA%\Android\Sdk`. L'émulateur sature la machine (ANR système) : préférer un vrai téléphone.
 
 ## Phases
 1. Squelette : dépôts, modules, agents. **Fait.**
@@ -36,6 +37,6 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
    - `scripts/import_katameros.py` puis `scripts/validate_content.py --write` : à relancer après toute modification du contenu.
    - Le choix des lectures du jour est dans `core-liturgy/DaySelector.kt`.
    - Les documents d'Antoine (traductions de Naguy Wasfy, diaporamas READINGS_*) sont dans `../ressources-coptes/` (voir `INDEX.md`). Ils pourront servir de texte français relu, après conversion des polices coptes anciennes.
-4. Écran Aujourd'hui et lecteur des lectures.
+4. Écran du jour, lecteur des lectures, réglages, lien copte://jour/… **Fait.** Testé sur émulateur pour le français ; les réglages (arabe, seconde langue) restent à vérifier sur un vrai téléphone.
 5. Widget.
 6. Contrat d'intégration (deep links, ContentProvider), puis publication sur JitPack.
