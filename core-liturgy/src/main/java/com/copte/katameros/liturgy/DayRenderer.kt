@@ -121,7 +121,11 @@ class DayRenderer(
         val verses = passages.flatMap { p ->
             p.verses(pack.bible::lastVerse).mapNotNull { (c, v) -> pack.bible.verse(p.book, c, v)?.let { Verse(c, v, it) } }
         }
-        val reference = passages.joinToString(" ; ") { "${pack.texts.books[it.book] ?: it.book} ${it.chapter}:${it.spec}" }
+        // Chapitre:versets isolés en gauche-à-droite (U+2066…U+2069) : sinon, en arabe, « 24:42-47 » s'affiche « 47-24:42 ».
+        // Nom du livre absent dans une langue (copte) : celui de la langue principale.
+        val reference = passages.joinToString(" ; ") {
+            "${pack.texts.books[it.book] ?: primary.texts.books[it.book] ?: it.book} ⁦${it.chapter}:${it.spec}⁩"
+        }
         val meta = pack.texts.readings[reading.type]
         if (reading.simple || meta == null) return ReadingText(null, reference, verses, null)
 

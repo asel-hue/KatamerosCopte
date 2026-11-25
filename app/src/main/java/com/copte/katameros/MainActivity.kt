@@ -20,6 +20,8 @@ import com.copte.katameros.liturgy.Section
 import com.copte.calendar.LiturgyContract
 import com.copte.katameros.ui.AppLabels
 import com.copte.katameros.ui.DayAdapter
+import com.copte.katameros.ui.DayHeaderAdapter
+import androidx.recyclerview.widget.ConcatAdapter
 import com.copte.katameros.ui.SettingsActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.time.Instant
@@ -42,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     private val executor = Executors.newSingleThreadExecutor()
     private val main = Handler(Looper.getMainLooper())
     private var generation = 0
+    private val headerAdapter = DayHeaderAdapter()
     /** Office à atteindre après affichage (lien `copte://lectures/…`), ou `null`. */
     private var pendingOffice: Int? = null
 
@@ -159,7 +162,7 @@ class MainActivity : AppCompatActivity() {
                 result.onSuccess(::display).onFailure {
                     Log.e(TAG, "Lectures du $newDate", it)
                     binding.error.visibility = View.VISIBLE
-                    binding.list.adapter = null
+                    binding.list.adapter = ConcatAdapter(headerAdapter)
                 }
             }
         }
@@ -177,10 +180,10 @@ class MainActivity : AppCompatActivity() {
     private fun display(loaded: Loaded) {
         updateHeader(date, loaded.title, AppLabels(this, prefs.primaryLanguage).season(loaded.day.season))
         val adapter = DayAdapter(this, prefs.fontSize, loaded.primaryRtl, loaded.secondaryRtl)
-        binding.list.adapter = adapter
+        binding.list.adapter = ConcatAdapter(headerAdapter, adapter)
         adapter.submit(loaded.blocks)
-        // Lien vers un office : aller à son en-tête (s'il existe ce jour-là), sinon en haut.
-        val target = pendingOffice?.let { id -> adapter.positionOfOffice(id) }?.takeIf { it >= 0 }
+        // Lien vers un office : aller à son en-tête (s'il existe ce jour-là ; +1 pour l'en-tête du jour), sinon en haut.
+        val target = pendingOffice?.let { id -> adapter.positionOfOffice(id) }?.takeIf { it >= 0 }?.plus(headerAdapter.itemCount)
         pendingOffice = null
         (binding.list.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(target ?: 0, 0)
     }
@@ -188,12 +191,14 @@ class MainActivity : AppCompatActivity() {
     private fun updateHeader(day: LocalDate, feast: String?, season: String?) {
         val coptic = com.copte.calendar.CopticCalendar.fromGregorian(day)
         val months = resources.getStringArray(R.array.coptic_months)
-        binding.copticDate.text = getString(R.string.coptic_date, coptic.day, months[coptic.month.number - 1], coptic.year)
-        binding.gregorianDate.text = day.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(resources.configuration.locales[0]))
-        binding.feastTitle.visibility = if (feast.isNullOrBlank()) View.GONE else View.VISIBLE
-        binding.feastTitle.text = feast
-        binding.season.visibility = if (season.isNullOrBlank()) View.GONE else View.VISIBLE
-        binding.season.text = season
+        headerAdapter.update(
+            DayHeaderAdapter.Header(
+                copticDate = getString(R.string.coptic_date, coptic.day, months[coptic.month.number - 1], coptic.year),
+                gregorianDate = day.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(resources.configuration.locales[0])),
+                feast = feast,
+                season = season,
+            )
+        )
     }
 
     private companion object {

@@ -80,5 +80,7 @@ class DayRendererTest {
         val blocks = render(LocalDate.of(2026, 11, 25), cop)
         val gospel = blocks.filterIsInstance<Block.ReadingBlock>().last { it.type == Reading.GOSPEL }
         assertTrue(gospel.secondary!!.verses.isNotEmpty())
+        // Pas de noms de livres en copte : on reprend celui de la langue principale.
+        assertTrue(gospel.secondary!!.reference, gospel.secondary!!.reference.startsWith("Luc "))
     }
 }

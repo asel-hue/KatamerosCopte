@@ -16,6 +16,8 @@ import com.copte.katameros.data.ContentStore
 import com.copte.katameros.data.ContentUpdater
 import com.copte.katameros.databinding.ActivitySettingsBinding
 import com.copte.katameros.widget.DayWidget
+import com.copte.katameros.CopticText
+import com.google.android.material.radiobutton.MaterialRadioButton
 
 /** Réglages : langues, taille du texte, thème, version du contenu et mises à jour. */
 class SettingsActivity : AppCompatActivity() {
@@ -107,9 +109,10 @@ class SettingsActivity : AppCompatActivity() {
         group.removeAllViews()
         val entries = (if (withNone) listOf<String?>(null) else emptyList()) + codes
         entries.forEach { code ->
-            val button = RadioButton(this).apply {
+            // MaterialRadioButton : même couleur que les boutons du thème ; police copte pour « ⲘⲉⲧⲢⲉⲙⲛ̀ⲭⲏⲙⲓ ».
+            val button = MaterialRadioButton(this).apply {
                 id = View.generateViewId()
-                text = languageName(code)
+                text = CopticText.style(this@SettingsActivity, languageName(code), extraSizeSp = 0f)
                 tag = code
             }
             group.addView(button)
