@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">اليوم القبطي</string>
+    <string name="widget_description">التاريخ القبطي لليوم، والعيد أو الزمن الطقسي، وقديسو السنكسار</string>
+</resources>

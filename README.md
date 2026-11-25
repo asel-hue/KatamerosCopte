@@ -2,7 +2,7 @@
 
 Application Android des **lectures quotidiennes de l'Église copte orthodoxe** (Katameros) pour le jour copte du jour, avec un **widget** qui affiche la date copte et le saint ou la fête du jour.
 
-> État : squelette (phase 1). Les lectures et le widget arrivent dans les prochaines phases.
+> État : lectures du jour, Synaxaire, réglages et widget en place (phases 1 à 5). Prochaine étape : contrat d'intégration avec les autres applications d'offices.
 
 ## Fonctionnalités prévues
 - Lectures du jour par office : Vêpres, Matines, Liturgie (Pauline, Catholicon, Praxis, Psaume, Évangile).

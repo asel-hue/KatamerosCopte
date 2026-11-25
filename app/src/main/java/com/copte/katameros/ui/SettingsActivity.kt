@@ -15,6 +15,7 @@ import com.copte.katameros.R
 import com.copte.katameros.data.ContentStore
 import com.copte.katameros.data.ContentUpdater
 import com.copte.katameros.databinding.ActivitySettingsBinding
+import com.copte.katameros.widget.DayWidget
 
 /** Réglages : langues, taille du texte, thème, version du contenu et mises à jour. */
 class SettingsActivity : AppCompatActivity() {
@@ -37,6 +38,7 @@ class SettingsActivity : AppCompatActivity() {
 
         fillLanguages(binding.primaryGroup, Prefs.PRIMARY_LANGUAGES, withNone = false, selected = prefs.primaryLanguage) { code ->
             prefs.primaryLanguage = code!!
+            DayWidget.updateAll(this)
             prefs.applyAppLocale() // recrée les activités dans la nouvelle langue
         }
         refreshSecondary()
@@ -76,11 +78,13 @@ class SettingsActivity : AppCompatActivity() {
                     is ContentUpdater.Result.Failed -> getString(R.string.update_failed, result.reason)
                 }
                 Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+                if (result is ContentUpdater.Result.Updated) DayWidget.updateAll(this)
                 updateContentInfo()
             }
         }
         binding.restoreEmbedded.setOnClickListener {
             ContentUpdater.restoreEmbedded(this)
+            DayWidget.updateAll(this)
             updateContentInfo()
         }
     }

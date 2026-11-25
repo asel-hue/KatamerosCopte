@@ -38,5 +38,5 @@ Application Android (Kotlin natif, vues XML + ViewBinding, Material 3) des **lec
    - Le choix des lectures du jour est dans `core-liturgy/DaySelector.kt`.
    - Les documents d'Antoine (traductions de Naguy Wasfy, diaporamas READINGS_*) sont dans `../ressources-coptes/` (voir `INDEX.md`). Ils pourront servir de texte français relu, après conversion des polices coptes anciennes.
 4. Écran du jour, lecteur des lectures, réglages, lien copte://jour/… **Fait.** Testé sur émulateur pour le français ; les réglages (arabe, seconde langue) restent à vérifier sur un vrai téléphone.
-5. Widget.
+5. Widget « Jour copte » (`widget/DayWidgetProvider`) : date copte, date grégorienne, fête ou temps, saints du Synaxaire ; mise à jour à minuit (alarme inexacte), heure/fuseau/langue, redémarrage. **Fait.** Données fournies par l'app (`ui/AppWidgetSource`, branchée dans `KatamerosApp`). Rendu à vérifier sur un vrai téléphone.
 6. Contrat d'intégration (deep links, ContentProvider), puis publication sur JitPack.

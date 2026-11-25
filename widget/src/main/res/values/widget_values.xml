@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette des applications coptes (violet / or), version claire. -->
+    <color name="widget_background">#F2F7F2FA</color>
+    <color name="widget_text">#FF21005D</color>
+    <color name="widget_text_secondary">#FF5B5466</color>
+    <color name="widget_accent">#FF8D6E00</color>
+    <dimen name="widget_corner_radius">20dp</dimen>
+
+    <string name="widget_name">Jour copte</string>
+    <string name="widget_description">Date copte du jour, fête ou temps liturgique et saints du Synaxaire</string>
+</resources>
