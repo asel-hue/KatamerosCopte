@@ -16,6 +16,8 @@ import com.copte.katameros.data.ContentStore
 import com.copte.katameros.databinding.ActivityMainBinding
 import com.copte.katameros.liturgy.Block
 import com.copte.katameros.liturgy.DayRenderer
+import com.copte.katameros.liturgy.Section
+import com.copte.calendar.LiturgyContract
 import com.copte.katameros.ui.AppLabels
 import com.copte.katameros.ui.DayAdapter
 import com.copte.katameros.ui.SettingsActivity
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     private val executor = Executors.newSingleThreadExecutor()
     private val main = Handler(Looper.getMainLooper())
     private var generation = 0
+    /** Office à atteindre après affichage (lien `copte://lectures/…`), ou `null`. */
+    private var pendingOffice: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
@@ -95,10 +99,26 @@ class MainActivity : AppCompatActivity() {
         executor.shutdownNow()
     }
 
+    /**
+     * Liens du contrat d'intégration : `copte://jour/AAAA-MM-JJ` et `copte://lectures/AAAA-MM-JJ/office`.
+     * Pour un office, on note la section à atteindre une fois les lectures affichées.
+     */
     private fun dateFrom(intent: Intent?): LocalDate? {
         val data = intent?.data ?: return null
-        if (data.scheme != "copte" || data.host != "jour") return null
-        return runCatching { LocalDate.parse(data.lastPathSegment) }.getOrNull()
+        if (data.scheme != "copte") return null
+        val segments = data.pathSegments
+        return when (data.host) {
+            "jour" -> runCatching { LocalDate.parse(segments.firstOrNull()) }.getOrNull()
+            "lectures" -> runCatching { LocalDate.parse(segments.firstOrNull()) }.getOrNull()?.also {
+                pendingOffice = when (LiturgyContract.Office.fromSlug(segments.getOrNull(1))) {
+                    LiturgyContract.Office.VESPERS -> Section.VESPERS
+                    LiturgyContract.Office.MATINS -> Section.MATINS
+                    LiturgyContract.Office.LITURGY -> Section.LITURGY
+                    null -> null
+                }
+            }
+            else -> null
+        }
     }
 
     private fun pickDate() {
@@ -157,7 +177,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = DayAdapter(this, prefs.fontSize, loaded.primaryRtl, loaded.secondaryRtl)
         binding.list.adapter = adapter
         adapter.submit(loaded.blocks)
-        binding.list.scrollToPosition(0)
+        // Lien vers un office : aller à son en-tête (s'il existe ce jour-là), sinon en haut.
+        val target = pendingOffice?.let { id -> adapter.positionOfOffice(id) }?.takeIf { it >= 0 }
+        pendingOffice = null
+        (binding.list.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(target ?: 0, 0)
     }
 
     private fun updateHeader(day: LocalDate, feast: String?, season: String?) {

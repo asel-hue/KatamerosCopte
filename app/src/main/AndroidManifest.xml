@@ -5,6 +5,16 @@
     <!-- Vérification des mises à jour du contenu (GitHub uniquement). -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--
+        Contrat d'intégration (LiturgyContract) : lecture du jour liturgique par les autres applications coptes,
+        réservée aux applications signées avec la même clé.
+    -->
+    <permission
+        android:name="com.copte.katameros.permission.READ_LITURGY"
+        android:description="@string/permission_read_liturgy_description"
+        android:label="@string/permission_read_liturgy_label"
+        android:protectionLevel="signature" />
+
     <application
         android:name=".KatamerosApp"
         tools:targetApi="tiramisu"
@@ -24,14 +34,25 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- Contrat d'intégration : copte://jour/2026-11-25 ouvre le jour demandé. -->
+            <!--
+                Contrat d'intégration : copte://jour/2026-11-25 ouvre le jour,
+                copte://lectures/2026-11-25/liturgie ouvre un office (vepres, matines, liturgie).
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="copte" android:host="jour" />
+                <data android:scheme="copte" />
+                <data android:host="jour" />
+                <data android:host="lectures" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".data.LiturgyProvider"
+            android:authorities="com.copte.katameros.liturgy"
+            android:exported="true"
+            android:readPermission="com.copte.katameros.permission.READ_LITURGY" />
 
         <activity
             android:name=".ui.SettingsActivity"

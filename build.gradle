@@ -15,5 +15,5 @@ if (localAppData != null && rootDir.absolutePath.contains('OneDrive')) {
 
 ext {
     // Version de la bibliothèque partagée (tag JitPack). Remplacée par le dossier local s'il existe.
-    copticCalendarCore = 'com.github.asel-hue:coptic-calendar-core:0.2.0'
+    copticCalendarCore = 'com.github.asel-hue:coptic-calendar-core:0.3.0'
 }

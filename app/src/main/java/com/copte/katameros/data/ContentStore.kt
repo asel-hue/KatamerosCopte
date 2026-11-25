@@ -27,7 +27,10 @@ object ContentStore {
     private var lectionary: Lectionary? = null
     private val packs = HashMap<String, LanguagePack>()
 
+    /** Idempotent : appelé par le ContentProvider (créé en premier) puis par l'Application. */
+    @Synchronized
     fun init(context: Context) {
+        if (::app.isInitialized) return
         app = context.applicationContext
         reload()
     }

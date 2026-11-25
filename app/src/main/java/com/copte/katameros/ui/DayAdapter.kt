@@ -54,6 +54,10 @@ class DayAdapter(
 
     override fun getItemCount() = visible.size
 
+    /** Position de l'en-tête de l'office [sectionId] (1 Veille, 2 Matin, 3 Messe), ou -1. */
+    fun positionOfOffice(sectionId: Int): Int =
+        visible.indexOfFirst { it is Block.OfficeHeader && it.sectionId == sectionId }
+
     override fun getItemViewType(position: Int) = when (visible[position]) {
         is Block.OfficeHeader -> 0
         is Block.SubHeader -> 1

@@ -63,4 +63,7 @@
     <string name="lang_ar" translatable="false">العربية</string>
     <string name="lang_en" translatable="false">English</string>
     <string name="lang_cop" translatable="false">Copte (ⲘⲉⲧⲢⲉⲙⲛ̀ⲭⲏⲙⲓ)</string>
+
+    <string name="permission_read_liturgy_label">Lire le jour liturgique copte</string>
+    <string name="permission_read_liturgy_description">Permet à une autre application copte signée par le même éditeur de lire la date copte, la fête et les saints du jour.</string>
 </resources>

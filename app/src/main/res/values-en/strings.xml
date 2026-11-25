@@ -55,4 +55,7 @@
     <string name="sources_note">Readings and Synaxarium: katameros-api (MIT licence). Bibles: Louis Segond 1910, Van Dyck, NKJV, Coptic Bible.</string>
 
     <string name="lang_none">None</string>
+
+    <string name="permission_read_liturgy_label">Read the Coptic liturgical day</string>
+    <string name="permission_read_liturgy_description">Lets another Coptic app from the same publisher read the Coptic date, feast and saints of the day.</string>
 </resources>

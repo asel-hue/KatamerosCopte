@@ -55,4 +55,7 @@
     <string name="sources_note">القراءات والسنكسار: katameros-api (رخصة MIT). الكتاب المقدس: لويس سيغون 1910، فان دايك، NKJV، الكتاب المقدس القبطي.</string>
 
     <string name="lang_none">لا شيء</string>
+
+    <string name="permission_read_liturgy_label">قراءة اليوم الطقسي القبطي</string>
+    <string name="permission_read_liturgy_description">يسمح لتطبيق قبطي آخر من نفس الناشر بقراءة التاريخ القبطي والعيد وقديسي اليوم.</string>
 </resources>
