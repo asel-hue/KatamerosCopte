@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".KatamerosApp"
         tools:targetApi="tiramisu"
         android:allowBackup="true"
         android:enableOnBackInvokedCallback="true"
@@ -17,12 +18,13 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- Contrat d'intégration : copte://jour/2026-11-25 ouvre le jour demandé (phase 6). -->
+            <!-- Contrat d'intégration : copte://jour/2026-11-25 ouvre le jour demandé. -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -30,6 +32,21 @@
                 <data android:scheme="copte" android:host="jour" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Persistance de la langue d'interface choisie sur API < 33 (sur 33+, le système s'en charge). -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
 
     </application>
 

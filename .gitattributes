@@ -19,3 +19,7 @@ gradlew text eol=lf
 *.aab binary
 *.jks binary
 *.keystore binary
+
+# Contenu embarqué : octets identiques partout (le manifest contient leurs sha256)
+app/src/main/assets/katameros/** text eol=lf
+scripts/data/*.json text eol=lf

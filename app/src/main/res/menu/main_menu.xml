@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_previous"
+        android:icon="@drawable/ic_chevron_left"
+        android:title="@string/previous_day"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_today"
+        android:icon="@drawable/ic_home"
+        android:title="@string/today"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_next"
+        android:icon="@drawable/ic_chevron_right"
+        android:title="@string/next_day"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_pick_date"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/choose_date"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+</menu>

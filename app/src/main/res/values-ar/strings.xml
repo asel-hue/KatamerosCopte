@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">القطمارس القبطي</string>
-    <string name="placeholder_today">اليوم القبطي: %1$d/%2$d/%3$d ش\n%4$s\n\nقراءات اليوم: قريبًا.</string>
+
+    <string name="previous_day">اليوم السابق</string>
+    <string name="next_day">اليوم التالي</string>
+    <string name="today">اليوم</string>
+    <string name="choose_date">اختر تاريخًا</string>
+    <string name="settings">الإعدادات</string>
+    <string name="loading_error">تعذّر عرض قراءات هذا اليوم.</string>
+    <string name="eve_hour">%1$s (ليلة)</string>
+
+    <string-array name="coptic_months">
+        <item>توت</item>
+        <item>بابه</item>
+        <item>هاتور</item>
+        <item>كيهك</item>
+        <item>طوبه</item>
+        <item>أمشير</item>
+        <item>برمهات</item>
+        <item>برموده</item>
+        <item>بشنس</item>
+        <item>بؤونه</item>
+        <item>أبيب</item>
+        <item>مسرى</item>
+        <item>النسيء</item>
+    </string-array>
+
+    <string name="season_nativity_fast">صوم الميلاد</string>
+    <string name="season_nineveh_fast">صوم نينوى</string>
+    <string name="season_great_lent">الصوم الكبير</string>
+    <string name="season_holy_week">أسبوع الآلام</string>
+    <string name="season_holy_fifty">الخماسين المقدسة</string>
+    <string name="season_apostles_fast">صوم الرسل</string>
+    <string name="season_virgin_fast">صوم العذراء</string>
+
+    <string name="settings_languages">اللغات</string>
+    <string name="settings_primary_language">اللغة الأساسية (ولغة الواجهة)</string>
+    <string name="settings_secondary_language">لغة ثانية تحت كل قراءة</string>
+    <string name="settings_display">العرض</string>
+    <string name="settings_font_size">حجم الخط: %1$d</string>
+    <string name="settings_theme">المظهر</string>
+    <string name="theme_system">حسب النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="settings_content">المحتوى</string>
+    <string name="content_version">إصدار المحتوى: %1$d (%2$s)</string>
+    <string name="content_embedded">مدمج في التطبيق</string>
+    <string name="content_downloaded">تم تنزيله</string>
+    <string name="check_updates">البحث عن تحديث</string>
+    <string name="update_done">تم تحديث المحتوى (الإصدار %1$d).</string>
+    <string name="update_none">المحتوى محدَّث بالفعل.</string>
+    <string name="update_failed">تعذّر التحديث: %1$s</string>
+    <string name="restore_embedded">العودة إلى المحتوى المدمج</string>
+    <string name="sources_note">القراءات والسنكسار: katameros-api (رخصة MIT). الكتاب المقدس: لويس سيغون 1910، فان دايك، NKJV، الكتاب المقدس القبطي.</string>
+
+    <string name="lang_none">لا شيء</string>
 </resources>

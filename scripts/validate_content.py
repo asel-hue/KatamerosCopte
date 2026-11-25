@@ -116,16 +116,32 @@ def main() -> int:
     refs = check_lectionary(lect) if lect else set()
     counts = {}
     for code in LANGUAGES:
-        for name in ("bible.json", "texts.json"):
-            if not (ASSETS / code / name).exists():
-                errors.append(f"{code}/{name} manquant")
-        bible = load(ASSETS / code / "bible.json") if (ASSETS / code / "bible.json").exists() else None
-        if bible is not None:
-            check_bible(code, bible, refs)
-        if code in SYNAXARIUM_LANGS and (ASSETS / code / "synaxarium.json").exists():
-            syn = load(ASSETS / code / "synaxarium.json")
-            if syn is not None:
-                counts[code] = check_synaxarium(code, syn)
+        if not (ASSETS / code / "texts.json").exists():
+            errors.append(f"{code}/texts.json manquant")
+        else:
+            load(ASSETS / code / "texts.json")
+        # Bible : un fichier par livre (bible/<livre>.json) ; Synaxaire : un fichier par mois (synaxarium/MM.json).
+        book_files = sorted((ASSETS / code / "bible").glob("*.json"))
+        if not book_files:
+            errors.append(f"{code}/bible/ vide")
+        bible = {}
+        for f in book_files:
+            data = load(f)
+            if data is not None:
+                bible[f.stem] = data
+        check_bible(code, bible, refs)
+        if code in SYNAXARIUM_LANGS:
+            syn = {}
+            for month in range(1, 14):
+                f = ASSETS / code / "synaxarium" / f"{month:02d}.json"
+                if not f.exists():
+                    errors.append(f"{code}/synaxarium/{month:02d}.json manquant")
+                    continue
+                data = load(f) or {}
+                if any(not k.startswith(f"{month:02d}-") for k in data):
+                    errors.append(f"{code}/synaxarium/{month:02d}.json : jour d'un autre mois")
+                syn.update(data)
+            counts[code] = check_synaxarium(code, syn)
     if "fr" in counts:
         for code, per_day in counts.items():
             diff = [k for k in per_day if per_day[k] != counts["fr"].get(k)]

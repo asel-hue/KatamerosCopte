@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lectures coptes</string>
-    <string name="placeholder_today">Jour copte : %1$d/%2$d/%3$d AM\n%4$s\n\nLectures du jour : bientôt disponibles.</string>
+
+    <!-- Jour -->
+    <string name="coptic_date" translatable="false">%1$d %2$s %3$d</string>
+    <string name="previous_day">Jour précédent</string>
+    <string name="next_day">Jour suivant</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="choose_date">Choisir une date</string>
+    <string name="settings">Réglages</string>
+    <string name="loading_error">Impossible d\'afficher les lectures de ce jour.</string>
+    <string name="eve_hour">%1$s (veille)</string>
+
+    <string-array name="coptic_months">
+        <item>Thout</item>
+        <item>Babah</item>
+        <item>Hatour</item>
+        <item>Kiahk</item>
+        <item>Toubah</item>
+        <item>Amshir</item>
+        <item>Baramhat</item>
+        <item>Baramoudah</item>
+        <item>Bashans</item>
+        <item>Baounah</item>
+        <item>Abib</item>
+        <item>Mesra</item>
+        <item>Nasie</item>
+    </string-array>
+
+    <!-- Temps liturgiques (clés : Season.id de coptic-calendar-core) -->
+    <string name="season_nativity_fast">Jeûne de la Nativité</string>
+    <string name="season_nineveh_fast">Jeûne de Ninive</string>
+    <string name="season_great_lent">Grand Carême</string>
+    <string name="season_holy_week">Semaine sainte</string>
+    <string name="season_holy_fifty">Les cinquante jours saints</string>
+    <string name="season_apostles_fast">Jeûne des Apôtres</string>
+    <string name="season_virgin_fast">Jeûne de la Vierge</string>
+
+    <!-- Réglages -->
+    <string name="settings_languages">Langues</string>
+    <string name="settings_primary_language">Langue principale (et de l\'interface)</string>
+    <string name="settings_secondary_language">Seconde langue, sous chaque lecture</string>
+    <string name="settings_display">Affichage</string>
+    <string name="settings_font_size">Taille du texte : %1$d</string>
+    <string name="settings_theme">Thème</string>
+    <string name="theme_system">Comme le système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="settings_content">Contenu</string>
+    <string name="content_version">Version du contenu : %1$d (%2$s)</string>
+    <string name="content_embedded">intégré à l\'application</string>
+    <string name="content_downloaded">téléchargé</string>
+    <string name="check_updates">Rechercher une mise à jour</string>
+    <string name="update_done">Contenu mis à jour (version %1$d).</string>
+    <string name="update_none">Le contenu est déjà à jour.</string>
+    <string name="update_failed">Mise à jour impossible : %1$s</string>
+    <string name="restore_embedded">Revenir au contenu intégré</string>
+    <string name="sources_note">Lectures et Synaxaire : katameros-api (licence MIT). Bibles : Louis Segond 1910, Van Dyck, NKJV, Bible copte.</string>
+
+    <string name="lang_none">Aucune</string>
+    <string name="lang_fr" translatable="false">Français</string>
+    <string name="lang_ar" translatable="false">العربية</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_cop" translatable="false">Copte (ⲘⲉⲧⲢⲉⲙⲛ̀ⲭⲏⲙⲓ)</string>
 </resources>

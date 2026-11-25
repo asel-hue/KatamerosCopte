@@ -243,13 +243,20 @@ def main() -> int:
           f"{len(lectionary['feasts'])} fêtes ; {len(refs)} références")
 
     for code, (lang_id, bible_id) in LANGUAGES.items():
+        # Un fichier par livre et un par mois copte : l'application ne lit que ce dont le jour a besoin.
+        for old in list((ASSETS / code).glob("*.json")) + list((ASSETS / code).glob("*/*.json")):
+            old.unlink()
         bible, wanted, missing = build_bible(db, bible_id, refs)
-        write_json(ASSETS / code / "bible.json", bible)
+        for book, chapters in bible.items():
+            write_json(ASSETS / code / "bible" / f"{book}.json", chapters)
         write_json(ASSETS / code / "texts.json", build_texts(db, lang_id))
-        line = f"{code}: {wanted - missing}/{wanted} versets"
+        line = f"{code}: {wanted - missing}/{wanted} versets, {len(bible)} livres"
         if code in SYNAXARIUM_LANGS:
             syn = build_synaxarium(db, lang_id)
-            write_json(ASSETS / code / "synaxarium.json", syn)
+            for month in range(1, 14):
+                prefix = f"{month:02d}-"
+                write_json(ASSETS / code / "synaxarium" / f"{month:02d}.json",
+                           {k: v for k, v in syn.items() if k.startswith(prefix)})
             line += f", synaxaire {len(syn)} jours / {sum(len(v) for v in syn.values())} commémorations"
         print(line)
     return 0

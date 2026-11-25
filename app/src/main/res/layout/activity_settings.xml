@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryContainer"
+        app:navigationIcon="@drawable/ic_chevron_left"
+        app:title="@string/settings"
+        app:titleTextColor="?attr/colorOnPrimaryContainer" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsHeader"
+                android:text="@string/settings_languages" />
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsLabel"
+                android:text="@string/settings_primary_language" />
+
+            <RadioGroup
+                android:id="@+id/primaryGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsLabel"
+                android:text="@string/settings_secondary_language" />
+
+            <RadioGroup
+                android:id="@+id/secondaryGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsHeader"
+                android:text="@string/settings_display" />
+
+            <TextView
+                android:id="@+id/fontSizeLabel"
+                style="@style/Widget.Katameros.SettingsLabel" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/fontSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="12"
+                android:valueTo="28" />
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsLabel"
+                android:text="@string/settings_theme" />
+
+            <RadioGroup
+                android:id="@+id/themeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/themeSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_system" />
+
+                <RadioButton
+                    android:id="@+id/themeLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_light" />
+
+                <RadioButton
+                    android:id="@+id/themeDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_dark" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsHeader"
+                android:text="@string/settings_content" />
+
+            <TextView
+                android:id="@+id/contentVersion"
+                style="@style/Widget.Katameros.SettingsLabel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkUpdates"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_updates" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/restoreEmbedded"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restore_embedded" />
+
+            <TextView
+                style="@style/Widget.Katameros.SettingsLabel"
+                android:layout_marginTop="16dp"
+                android:text="@string/sources_note"
+                android:textAppearance="?attr/textAppearanceBodySmall" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
